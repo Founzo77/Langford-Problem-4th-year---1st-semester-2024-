@@ -1,0 +1,12 @@
+@startjson
+{
+    "C": "uint",
+    "F": "uint",
+    "nbWorkers": "uint",
+    "nbDispatchers": "uint",
+    "initializationDuration": "ms",
+    "workDuration": "ms",
+    "mergeDuration": "ms",
+    "metaName": ""
+}
+@endjson

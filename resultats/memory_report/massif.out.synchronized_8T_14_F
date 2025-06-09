@@ -1,0 +1,1083 @@
+desc: (none)
+cmd: ./noMain
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=2405412277
+mem_heap_B=393528260
+mem_heap_extra_B=65574772
+mem_stacks_B=0
+heap_tree=detailed
+n2: 393528260 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 393446352 0x115AD7: allocate (new_allocator.h:127)
+  n1: 393446352 0x115AD7: allocate (alloc_traits.h:464)
+   n1: 393446352 0x115AD7: allocate (TrackerAllocator.hpp:65)
+    n1: 393446352 0x115AD7: allocate (alloc_traits.h:318)
+     n1: 393446352 0x115AD7: _M_get_node (stl_list.h:443)
+      n1: 393446352 0x115AD7: _M_create_node<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:635)
+       n1: 393446352 0x115AD7: _M_insert<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:1912)
+        n1: 393446352 0x115AD7: push_back (stl_list.h:1213)
+         n1: 393446352 0x115AD7: addTask (MonoQueueDispatcher.hpp:147)
+          n1: 393446352 0x115AD7: resolveTask (SynchronizedWorker.hpp:124)
+           n1: 393446352 0x115AD7: work (SynchronizedWorker.hpp:53)
+            n2: 393446352 0x115AD7: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) [clone ._omp_fn.0] (SynchronizedResolver.hpp:126)
+             n1: 322247952 0x4880C0D: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 322247952 0x4CE0AC2: start_thread (pthread_create.c:442)
+               n0: 322247952 0x4D71A03: clone (clone.S:100)
+             n1: 71198400 0x4877A15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 71198400 0x115431: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (SynchronizedResolver.hpp:76)
+               n0: 71198400 0x111706: main (noMain.cpp:32)
+ n0: 81908 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=2
+#-----------
+time=5264603867
+mem_heap_B=742903268
+mem_heap_extra_B=123803940
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=9200716404
+mem_heap_B=1211401316
+mem_heap_extra_B=201886948
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1211401316 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1211319408 0x115AD7: allocate (new_allocator.h:127)
+  n1: 1211319408 0x115AD7: allocate (alloc_traits.h:464)
+   n1: 1211319408 0x115AD7: allocate (TrackerAllocator.hpp:65)
+    n1: 1211319408 0x115AD7: allocate (alloc_traits.h:318)
+     n1: 1211319408 0x115AD7: _M_get_node (stl_list.h:443)
+      n1: 1211319408 0x115AD7: _M_create_node<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:635)
+       n1: 1211319408 0x115AD7: _M_insert<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:1912)
+        n1: 1211319408 0x115AD7: push_back (stl_list.h:1213)
+         n1: 1211319408 0x115AD7: addTask (MonoQueueDispatcher.hpp:147)
+          n1: 1211319408 0x115AD7: resolveTask (SynchronizedWorker.hpp:124)
+           n1: 1211319408 0x115AD7: work (SynchronizedWorker.hpp:53)
+            n2: 1211319408 0x115AD7: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) [clone ._omp_fn.0] (SynchronizedResolver.hpp:126)
+             n1: 981714624 0x4880C0D: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 981714624 0x4CE0AC2: start_thread (pthread_create.c:442)
+               n0: 981714624 0x4D71A03: clone (clone.S:100)
+             n1: 229604784 0x4877A15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 229604784 0x115431: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (SynchronizedResolver.hpp:76)
+               n0: 229604784 0x111706: main (noMain.cpp:32)
+ n0: 81908 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=4
+#-----------
+time=11600793276
+mem_heap_B=1492919828
+mem_heap_extra_B=248806700
+mem_stacks_B=0
+heap_tree=detailed
+n2: 1492919828 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1492837920 0x115AD7: allocate (new_allocator.h:127)
+  n1: 1492837920 0x115AD7: allocate (alloc_traits.h:464)
+   n1: 1492837920 0x115AD7: allocate (TrackerAllocator.hpp:65)
+    n1: 1492837920 0x115AD7: allocate (alloc_traits.h:318)
+     n1: 1492837920 0x115AD7: _M_get_node (stl_list.h:443)
+      n1: 1492837920 0x115AD7: _M_create_node<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:635)
+       n1: 1492837920 0x115AD7: _M_insert<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:1912)
+        n1: 1492837920 0x115AD7: push_back (stl_list.h:1213)
+         n1: 1492837920 0x115AD7: addTask (MonoQueueDispatcher.hpp:147)
+          n1: 1492837920 0x115AD7: resolveTask (SynchronizedWorker.hpp:124)
+           n1: 1492837920 0x115AD7: work (SynchronizedWorker.hpp:53)
+            n2: 1492837920 0x115AD7: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) [clone ._omp_fn.0] (SynchronizedResolver.hpp:126)
+             n1: 1273605072 0x4880C0D: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 1273605072 0x4CE0AC2: start_thread (pthread_create.c:442)
+               n0: 1273605072 0x4D71A03: clone (clone.S:100)
+             n1: 219232848 0x4877A15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 219232848 0x115431: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (SynchronizedResolver.hpp:76)
+               n0: 219232848 0x111706: main (noMain.cpp:32)
+ n0: 81908 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=5
+#-----------
+time=14341635354
+mem_heap_B=1789116644
+mem_heap_extra_B=298172836
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=18233336848
+mem_heap_B=2070816692
+mem_heap_extra_B=345122844
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=20674086167
+mem_heap_B=2263191044
+mem_heap_extra_B=377185236
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=23639433841
+mem_heap_B=2479852484
+mem_heap_extra_B=413295476
+mem_stacks_B=0
+heap_tree=detailed
+n2: 2479852484 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2479770576 0x115AD7: allocate (new_allocator.h:127)
+  n1: 2479770576 0x115AD7: allocate (alloc_traits.h:464)
+   n1: 2479770576 0x115AD7: allocate (TrackerAllocator.hpp:65)
+    n1: 2479770576 0x115AD7: allocate (alloc_traits.h:318)
+     n1: 2479770576 0x115AD7: _M_get_node (stl_list.h:443)
+      n1: 2479770576 0x115AD7: _M_create_node<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:635)
+       n1: 2479770576 0x115AD7: _M_insert<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:1912)
+        n1: 2479770576 0x115AD7: push_back (stl_list.h:1213)
+         n1: 2479770576 0x115AD7: addTask (MonoQueueDispatcher.hpp:147)
+          n1: 2479770576 0x115AD7: resolveTask (SynchronizedWorker.hpp:124)
+           n1: 2479770576 0x115AD7: work (SynchronizedWorker.hpp:53)
+            n2: 2479770576 0x115AD7: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) [clone ._omp_fn.0] (SynchronizedResolver.hpp:126)
+             n1: 2145695040 0x4880C0D: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 2145695040 0x4CE0AC2: start_thread (pthread_create.c:442)
+               n0: 2145695040 0x4D71A03: clone (clone.S:100)
+             n1: 334075536 0x4877A15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 334075536 0x115431: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (SynchronizedResolver.hpp:76)
+               n0: 334075536 0x111706: main (noMain.cpp:32)
+ n0: 81908 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=9
+#-----------
+time=26745851131
+mem_heap_B=2705991908
+mem_heap_extra_B=450985380
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=30916999438
+mem_heap_B=3018680852
+mem_heap_extra_B=503100204
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=33353046135
+mem_heap_B=3212042372
+mem_heap_extra_B=535327124
+mem_stacks_B=0
+heap_tree=detailed
+n2: 3212042372 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3211960464 0x115AD7: allocate (new_allocator.h:127)
+  n1: 3211960464 0x115AD7: allocate (alloc_traits.h:464)
+   n1: 3211960464 0x115AD7: allocate (TrackerAllocator.hpp:65)
+    n1: 3211960464 0x115AD7: allocate (alloc_traits.h:318)
+     n1: 3211960464 0x115AD7: _M_get_node (stl_list.h:443)
+      n1: 3211960464 0x115AD7: _M_create_node<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:635)
+       n1: 3211960464 0x115AD7: _M_insert<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:1912)
+        n1: 3211960464 0x115AD7: push_back (stl_list.h:1213)
+         n1: 3211960464 0x115AD7: addTask (MonoQueueDispatcher.hpp:147)
+          n1: 3211960464 0x115AD7: resolveTask (SynchronizedWorker.hpp:124)
+           n1: 3211960464 0x115AD7: work (SynchronizedWorker.hpp:53)
+            n2: 3211960464 0x115AD7: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) [clone ._omp_fn.0] (SynchronizedResolver.hpp:126)
+             n1: 2713866672 0x4880C0D: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 2713866672 0x4CE0AC2: start_thread (pthread_create.c:442)
+               n0: 2713866672 0x4D71A03: clone (clone.S:100)
+             n1: 498093792 0x4877A15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 498093792 0x115431: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (SynchronizedResolver.hpp:76)
+               n0: 498093792 0x111706: main (noMain.cpp:32)
+ n0: 81908 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=12
+#-----------
+time=35803196345
+mem_heap_B=3400504628
+mem_heap_extra_B=566737500
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=39696586968
+mem_heap_B=3692158772
+mem_heap_extra_B=615346524
+mem_stacks_B=0
+heap_tree=detailed
+n2: 3692158772 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3692076864 0x115AD7: allocate (new_allocator.h:127)
+  n1: 3692076864 0x115AD7: allocate (alloc_traits.h:464)
+   n1: 3692076864 0x115AD7: allocate (TrackerAllocator.hpp:65)
+    n1: 3692076864 0x115AD7: allocate (alloc_traits.h:318)
+     n1: 3692076864 0x115AD7: _M_get_node (stl_list.h:443)
+      n1: 3692076864 0x115AD7: _M_create_node<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:635)
+       n1: 3692076864 0x115AD7: _M_insert<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:1912)
+        n1: 3692076864 0x115AD7: push_back (stl_list.h:1213)
+         n1: 3692076864 0x115AD7: addTask (MonoQueueDispatcher.hpp:147)
+          n1: 3692076864 0x115AD7: resolveTask (SynchronizedWorker.hpp:124)
+           n1: 3692076864 0x115AD7: work (SynchronizedWorker.hpp:53)
+            n2: 3692076864 0x115AD7: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) [clone ._omp_fn.0] (SynchronizedResolver.hpp:126)
+             n1: 3193983072 0x4880C0D: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 3193983072 0x4CE0AC2: start_thread (pthread_create.c:442)
+               n0: 3193983072 0x4D71A03: clone (clone.S:100)
+             n1: 498093792 0x4877A15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 498093792 0x115431: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (SynchronizedResolver.hpp:76)
+               n0: 498093792 0x111706: main (noMain.cpp:32)
+ n0: 81908 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=42473183691
+mem_heap_B=3907692452
+mem_heap_extra_B=651268804
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=46947056210
+mem_heap_B=4038058916
+mem_heap_extra_B=672996548
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4038058916 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4037977008 0x115AD7: allocate (new_allocator.h:127)
+  n1: 4037977008 0x115AD7: allocate (alloc_traits.h:464)
+   n1: 4037977008 0x115AD7: allocate (TrackerAllocator.hpp:65)
+    n1: 4037977008 0x115AD7: allocate (alloc_traits.h:318)
+     n1: 4037977008 0x115AD7: _M_get_node (stl_list.h:443)
+      n1: 4037977008 0x115AD7: _M_create_node<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:635)
+       n1: 4037977008 0x115AD7: _M_insert<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:1912)
+        n1: 4037977008 0x115AD7: push_back (stl_list.h:1213)
+         n1: 4037977008 0x115AD7: addTask (MonoQueueDispatcher.hpp:147)
+          n1: 4037977008 0x115AD7: resolveTask (SynchronizedWorker.hpp:124)
+           n1: 4037977008 0x115AD7: work (SynchronizedWorker.hpp:53)
+            n2: 4037977008 0x115AD7: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) [clone ._omp_fn.0] (SynchronizedResolver.hpp:126)
+             n1: 3497324112 0x4880C0D: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 3497324112 0x4CE0AC2: start_thread (pthread_create.c:442)
+               n0: 3497324112 0x4D71A03: clone (clone.S:100)
+             n1: 540652896 0x4877A15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 540652896 0x115431: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (SynchronizedResolver.hpp:76)
+               n0: 540652896 0x111706: main (noMain.cpp:32)
+ n0: 81908 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=16
+#-----------
+time=50753444605
+mem_heap_B=4160416052
+mem_heap_extra_B=693389404
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4160416052 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4160334144 0x115AD7: allocate (new_allocator.h:127)
+  n1: 4160334144 0x115AD7: allocate (alloc_traits.h:464)
+   n1: 4160334144 0x115AD7: allocate (TrackerAllocator.hpp:65)
+    n1: 4160334144 0x115AD7: allocate (alloc_traits.h:318)
+     n1: 4160334144 0x115AD7: _M_get_node (stl_list.h:443)
+      n1: 4160334144 0x115AD7: _M_create_node<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:635)
+       n1: 4160334144 0x115AD7: _M_insert<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:1912)
+        n1: 4160334144 0x115AD7: push_back (stl_list.h:1213)
+         n1: 4160334144 0x115AD7: addTask (MonoQueueDispatcher.hpp:147)
+          n1: 4160334144 0x115AD7: resolveTask (SynchronizedWorker.hpp:124)
+           n1: 4160334144 0x115AD7: work (SynchronizedWorker.hpp:53)
+            n2: 4160334144 0x115AD7: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) [clone ._omp_fn.0] (SynchronizedResolver.hpp:126)
+             n1: 3572467392 0x4880C0D: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 3572467392 0x4CE0AC2: start_thread (pthread_create.c:442)
+               n0: 3572467392 0x4D71A03: clone (clone.S:100)
+             n1: 587866752 0x4877A15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 587866752 0x115431: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (SynchronizedResolver.hpp:76)
+               n0: 587866752 0x111706: main (noMain.cpp:32)
+ n0: 81908 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=17
+#-----------
+time=53115712882
+mem_heap_B=4244040212
+mem_heap_extra_B=707326764
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4244040212 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4243958304 0x115AD7: allocate (new_allocator.h:127)
+  n1: 4243958304 0x115AD7: allocate (alloc_traits.h:464)
+   n1: 4243958304 0x115AD7: allocate (TrackerAllocator.hpp:65)
+    n1: 4243958304 0x115AD7: allocate (alloc_traits.h:318)
+     n1: 4243958304 0x115AD7: _M_get_node (stl_list.h:443)
+      n1: 4243958304 0x115AD7: _M_create_node<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:635)
+       n1: 4243958304 0x115AD7: _M_insert<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:1912)
+        n1: 4243958304 0x115AD7: push_back (stl_list.h:1213)
+         n1: 4243958304 0x115AD7: addTask (MonoQueueDispatcher.hpp:147)
+          n1: 4243958304 0x115AD7: resolveTask (SynchronizedWorker.hpp:124)
+           n1: 4243958304 0x115AD7: work (SynchronizedWorker.hpp:53)
+            n2: 4243958304 0x115AD7: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) [clone ._omp_fn.0] (SynchronizedResolver.hpp:126)
+             n1: 3642392016 0x4880C0D: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 3642392016 0x4CE0AC2: start_thread (pthread_create.c:442)
+               n0: 3642392016 0x4D71A03: clone (clone.S:100)
+             n1: 601566288 0x4877A15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 601566288 0x115431: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (SynchronizedResolver.hpp:76)
+               n0: 601566288 0x111706: main (noMain.cpp:32)
+ n0: 81908 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=18
+#-----------
+time=56752737097
+mem_heap_B=4391753444
+mem_heap_extra_B=731945636
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=59941552909
+mem_heap_B=4505133812
+mem_heap_extra_B=750842364
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4505133812 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4505051904 0x115AD7: allocate (new_allocator.h:127)
+  n1: 4505051904 0x115AD7: allocate (alloc_traits.h:464)
+   n1: 4505051904 0x115AD7: allocate (TrackerAllocator.hpp:65)
+    n1: 4505051904 0x115AD7: allocate (alloc_traits.h:318)
+     n1: 4505051904 0x115AD7: _M_get_node (stl_list.h:443)
+      n1: 4505051904 0x115AD7: _M_create_node<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:635)
+       n1: 4505051904 0x115AD7: _M_insert<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:1912)
+        n1: 4505051904 0x115AD7: push_back (stl_list.h:1213)
+         n1: 4505051904 0x115AD7: addTask (MonoQueueDispatcher.hpp:147)
+          n1: 4505051904 0x115AD7: resolveTask (SynchronizedWorker.hpp:124)
+           n1: 4505051904 0x115AD7: work (SynchronizedWorker.hpp:53)
+            n2: 4505051904 0x115AD7: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) [clone ._omp_fn.0] (SynchronizedResolver.hpp:126)
+             n1: 3802681776 0x4880C0D: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 3802681776 0x4CE0AC2: start_thread (pthread_create.c:442)
+               n0: 3802681776 0x4D71A03: clone (clone.S:100)
+             n1: 702370128 0x4877A15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 702370128 0x115431: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (SynchronizedResolver.hpp:76)
+               n0: 702370128 0x111706: main (noMain.cpp:32)
+ n0: 81908 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=20
+#-----------
+time=62361995234
+mem_heap_B=4595686868
+mem_heap_extra_B=765934540
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4595686868 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4595604960 0x115AD7: allocate (new_allocator.h:127)
+  n1: 4595604960 0x115AD7: allocate (alloc_traits.h:464)
+   n1: 4595604960 0x115AD7: allocate (TrackerAllocator.hpp:65)
+    n1: 4595604960 0x115AD7: allocate (alloc_traits.h:318)
+     n1: 4595604960 0x115AD7: _M_get_node (stl_list.h:443)
+      n1: 4595604960 0x115AD7: _M_create_node<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:635)
+       n1: 4595604960 0x115AD7: _M_insert<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:1912)
+        n1: 4595604960 0x115AD7: push_back (stl_list.h:1213)
+         n1: 4595604960 0x115AD7: addTask (MonoQueueDispatcher.hpp:147)
+          n1: 4595604960 0x115AD7: resolveTask (SynchronizedWorker.hpp:124)
+           n1: 4595604960 0x115AD7: work (SynchronizedWorker.hpp:53)
+            n2: 4595604960 0x115AD7: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) [clone ._omp_fn.0] (SynchronizedResolver.hpp:126)
+             n1: 3882487824 0x4880C0D: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 3882487824 0x4CE0AC2: start_thread (pthread_create.c:442)
+               n0: 3882487824 0x4D71A03: clone (clone.S:100)
+             n1: 713117136 0x4877A15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 713117136 0x115431: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (SynchronizedResolver.hpp:76)
+               n0: 713117136 0x111706: main (noMain.cpp:32)
+ n0: 81908 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=21
+#-----------
+time=65253606240
+mem_heap_B=4688059988
+mem_heap_extra_B=781330060
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4688059988 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4687978080 0x115AD7: allocate (new_allocator.h:127)
+  n1: 4687978080 0x115AD7: allocate (alloc_traits.h:464)
+   n1: 4687978080 0x115AD7: allocate (TrackerAllocator.hpp:65)
+    n1: 4687978080 0x115AD7: allocate (alloc_traits.h:318)
+     n1: 4687978080 0x115AD7: _M_get_node (stl_list.h:443)
+      n1: 4687978080 0x115AD7: _M_create_node<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:635)
+       n1: 4687978080 0x115AD7: _M_insert<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:1912)
+        n1: 4687978080 0x115AD7: push_back (stl_list.h:1213)
+         n1: 4687978080 0x115AD7: addTask (MonoQueueDispatcher.hpp:147)
+          n1: 4687978080 0x115AD7: resolveTask (SynchronizedWorker.hpp:124)
+           n1: 4687978080 0x115AD7: work (SynchronizedWorker.hpp:53)
+            n2: 4687978080 0x115AD7: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) [clone ._omp_fn.0] (SynchronizedResolver.hpp:126)
+             n1: 3925548768 0x4880C0D: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 3925548768 0x4CE0AC2: start_thread (pthread_create.c:442)
+               n0: 3925548768 0x4D71A03: clone (clone.S:100)
+             n1: 762429312 0x4877A15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 762429312 0x115431: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (SynchronizedResolver.hpp:76)
+               n0: 762429312 0x111706: main (noMain.cpp:32)
+ n0: 81908 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=22
+#-----------
+time=67843864562
+mem_heap_B=4782289844
+mem_heap_extra_B=797035036
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4782289844 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4782207936 0x115AD7: allocate (new_allocator.h:127)
+  n1: 4782207936 0x115AD7: allocate (alloc_traits.h:464)
+   n1: 4782207936 0x115AD7: allocate (TrackerAllocator.hpp:65)
+    n1: 4782207936 0x115AD7: allocate (alloc_traits.h:318)
+     n1: 4782207936 0x115AD7: _M_get_node (stl_list.h:443)
+      n1: 4782207936 0x115AD7: _M_create_node<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:635)
+       n1: 4782207936 0x115AD7: _M_insert<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:1912)
+        n1: 4782207936 0x115AD7: push_back (stl_list.h:1213)
+         n1: 4782207936 0x115AD7: addTask (MonoQueueDispatcher.hpp:147)
+          n1: 4782207936 0x115AD7: resolveTask (SynchronizedWorker.hpp:124)
+           n1: 4782207936 0x115AD7: work (SynchronizedWorker.hpp:53)
+            n2: 4782207936 0x115AD7: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) [clone ._omp_fn.0] (SynchronizedResolver.hpp:126)
+             n1: 4000872576 0x4880C0D: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 4000872576 0x4CE0AC2: start_thread (pthread_create.c:442)
+               n0: 4000872576 0x4D71A03: clone (clone.S:100)
+             n1: 781335360 0x4877A15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 781335360 0x115431: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (SynchronizedResolver.hpp:76)
+               n0: 781335360 0x111706: main (noMain.cpp:32)
+ n0: 81908 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=23
+#-----------
+time=70401907803
+mem_heap_B=4874488628
+mem_heap_extra_B=812401500
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=74506827087
+mem_heap_B=5003570372
+mem_heap_extra_B=833915124
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=77031498195
+mem_heap_B=5076496580
+mem_heap_extra_B=846069492
+mem_stacks_B=0
+heap_tree=detailed
+n2: 5076496580 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5076414672 0x115AD7: allocate (new_allocator.h:127)
+  n1: 5076414672 0x115AD7: allocate (alloc_traits.h:464)
+   n1: 5076414672 0x115AD7: allocate (TrackerAllocator.hpp:65)
+    n1: 5076414672 0x115AD7: allocate (alloc_traits.h:318)
+     n1: 5076414672 0x115AD7: _M_get_node (stl_list.h:443)
+      n1: 5076414672 0x115AD7: _M_create_node<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:635)
+       n1: 5076414672 0x115AD7: _M_insert<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:1912)
+        n1: 5076414672 0x115AD7: push_back (stl_list.h:1213)
+         n1: 5076414672 0x115AD7: addTask (MonoQueueDispatcher.hpp:147)
+          n1: 5076414672 0x115AD7: resolveTask (SynchronizedWorker.hpp:124)
+           n1: 5076414672 0x115AD7: work (SynchronizedWorker.hpp:53)
+            n2: 5076414672 0x115AD7: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) [clone ._omp_fn.0] (SynchronizedResolver.hpp:126)
+             n1: 4332397680 0x4880C0D: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 4332397680 0x4CE0AC2: start_thread (pthread_create.c:442)
+               n0: 4332397680 0x4D71A03: clone (clone.S:100)
+             n1: 744016992 0x4877A15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 744016992 0x115431: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (SynchronizedResolver.hpp:76)
+               n0: 744016992 0x111706: main (noMain.cpp:32)
+ n0: 81908 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=26
+#-----------
+time=80210630489
+mem_heap_B=5178534068
+mem_heap_extra_B=863075740
+mem_stacks_B=0
+heap_tree=detailed
+n2: 5178534068 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5178452160 0x115AD7: allocate (new_allocator.h:127)
+  n1: 5178452160 0x115AD7: allocate (alloc_traits.h:464)
+   n1: 5178452160 0x115AD7: allocate (TrackerAllocator.hpp:65)
+    n1: 5178452160 0x115AD7: allocate (alloc_traits.h:318)
+     n1: 5178452160 0x115AD7: _M_get_node (stl_list.h:443)
+      n1: 5178452160 0x115AD7: _M_create_node<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:635)
+       n1: 5178452160 0x115AD7: _M_insert<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:1912)
+        n1: 5178452160 0x115AD7: push_back (stl_list.h:1213)
+         n1: 5178452160 0x115AD7: addTask (MonoQueueDispatcher.hpp:147)
+          n1: 5178452160 0x115AD7: resolveTask (SynchronizedWorker.hpp:124)
+           n1: 5178452160 0x115AD7: work (SynchronizedWorker.hpp:53)
+            n2: 5178452160 0x115AD7: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) [clone ._omp_fn.0] (SynchronizedResolver.hpp:126)
+             n1: 4445853456 0x4880C0D: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 4445853456 0x4CE0AC2: start_thread (pthread_create.c:442)
+               n0: 4445853456 0x4D71A03: clone (clone.S:100)
+             n1: 732598704 0x4877A15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 732598704 0x115431: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (SynchronizedResolver.hpp:76)
+               n0: 732598704 0x111706: main (noMain.cpp:32)
+ n0: 81908 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=27
+#-----------
+time=83566923462
+mem_heap_B=5282622404
+mem_heap_extra_B=880423796
+mem_stacks_B=0
+heap_tree=detailed
+n2: 5282622404 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5282540496 0x115AD7: allocate (new_allocator.h:127)
+  n1: 5282540496 0x115AD7: allocate (alloc_traits.h:464)
+   n1: 5282540496 0x115AD7: allocate (TrackerAllocator.hpp:65)
+    n1: 5282540496 0x115AD7: allocate (alloc_traits.h:318)
+     n1: 5282540496 0x115AD7: _M_get_node (stl_list.h:443)
+      n1: 5282540496 0x115AD7: _M_create_node<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:635)
+       n1: 5282540496 0x115AD7: _M_insert<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:1912)
+        n1: 5282540496 0x115AD7: push_back (stl_list.h:1213)
+         n1: 5282540496 0x115AD7: addTask (MonoQueueDispatcher.hpp:147)
+          n1: 5282540496 0x115AD7: resolveTask (SynchronizedWorker.hpp:124)
+           n1: 5282540496 0x115AD7: work (SynchronizedWorker.hpp:53)
+            n2: 5282540496 0x115AD7: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) [clone ._omp_fn.0] (SynchronizedResolver.hpp:126)
+             n1: 4549941792 0x4880C0D: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 4549941792 0x4CE0AC2: start_thread (pthread_create.c:442)
+               n0: 4549941792 0x4D71A03: clone (clone.S:100)
+             n1: 732598704 0x4877A15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 732598704 0x115431: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (SynchronizedResolver.hpp:76)
+               n0: 732598704 0x111706: main (noMain.cpp:32)
+ n0: 81908 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=28
+#-----------
+time=86631800532
+mem_heap_B=5388802964
+mem_heap_extra_B=898120556
+mem_stacks_B=0
+heap_tree=detailed
+n2: 5388802964 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5388721056 0x115AD7: allocate (new_allocator.h:127)
+  n1: 5388721056 0x115AD7: allocate (alloc_traits.h:464)
+   n1: 5388721056 0x115AD7: allocate (TrackerAllocator.hpp:65)
+    n1: 5388721056 0x115AD7: allocate (alloc_traits.h:318)
+     n1: 5388721056 0x115AD7: _M_get_node (stl_list.h:443)
+      n1: 5388721056 0x115AD7: _M_create_node<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:635)
+       n1: 5388721056 0x115AD7: _M_insert<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:1912)
+        n1: 5388721056 0x115AD7: push_back (stl_list.h:1213)
+         n1: 5388721056 0x115AD7: addTask (MonoQueueDispatcher.hpp:147)
+          n1: 5388721056 0x115AD7: resolveTask (SynchronizedWorker.hpp:124)
+           n1: 5388721056 0x115AD7: work (SynchronizedWorker.hpp:53)
+            n2: 5388721056 0x115AD7: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) [clone ._omp_fn.0] (SynchronizedResolver.hpp:126)
+             n1: 4656122352 0x4880C0D: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 4656122352 0x4CE0AC2: start_thread (pthread_create.c:442)
+               n0: 4656122352 0x4D71A03: clone (clone.S:100)
+             n1: 732598704 0x4877A15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 732598704 0x115431: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (SynchronizedResolver.hpp:76)
+               n0: 732598704 0x111706: main (noMain.cpp:32)
+ n0: 81908 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=29
+#-----------
+time=89950833059
+mem_heap_B=5495912468
+mem_heap_extra_B=915972140
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=92510731914
+mem_heap_B=5578803764
+mem_heap_extra_B=929787356
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=95388013378
+mem_heap_B=5663685716
+mem_heap_extra_B=943934348
+mem_stacks_B=0
+heap_tree=peak
+n2: 5663685716 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5663603808 0x115AD7: allocate (new_allocator.h:127)
+  n1: 5663603808 0x115AD7: allocate (alloc_traits.h:464)
+   n1: 5663603808 0x115AD7: allocate (TrackerAllocator.hpp:65)
+    n1: 5663603808 0x115AD7: allocate (alloc_traits.h:318)
+     n1: 5663603808 0x115AD7: _M_get_node (stl_list.h:443)
+      n1: 5663603808 0x115AD7: _M_create_node<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:635)
+       n1: 5663603808 0x115AD7: _M_insert<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:1912)
+        n1: 5663603808 0x115AD7: push_back (stl_list.h:1213)
+         n1: 5663603808 0x115AD7: addTask (MonoQueueDispatcher.hpp:147)
+          n1: 5663603808 0x115AD7: resolveTask (SynchronizedWorker.hpp:124)
+           n1: 5663603808 0x115AD7: work (SynchronizedWorker.hpp:53)
+            n2: 5663603808 0x115AD7: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) [clone ._omp_fn.0] (SynchronizedResolver.hpp:126)
+             n1: 4931005104 0x4880C0D: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 4931005104 0x4CE0AC2: start_thread (pthread_create.c:442)
+               n0: 4931005104 0x4D71A03: clone (clone.S:100)
+             n1: 732598704 0x4877A15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 732598704 0x115431: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (SynchronizedResolver.hpp:76)
+               n0: 732598704 0x111706: main (noMain.cpp:32)
+ n0: 81908 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=32
+#-----------
+time=99148672601
+mem_heap_B=5682373844
+mem_heap_extra_B=947049036
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=102717020035
+mem_heap_B=5649422996
+mem_heap_extra_B=941557228
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=105393280410
+mem_heap_B=5620799540
+mem_heap_extra_B=936786652
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=109853714335
+mem_heap_B=5570744756
+mem_heap_extra_B=928444188
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=112529974538
+mem_heap_B=5540695412
+mem_heap_extra_B=923435964
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=116990410982
+mem_heap_B=5485875908
+mem_heap_extra_B=914299380
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=119666673043
+mem_heap_B=5471933156
+mem_heap_extra_B=911975588
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=122342934761
+mem_heap_B=5439172340
+mem_heap_extra_B=906515452
+mem_stacks_B=0
+heap_tree=detailed
+n2: 5439172340 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 5439090432 0x115AD7: allocate (new_allocator.h:127)
+  n1: 5439090432 0x115AD7: allocate (alloc_traits.h:464)
+   n1: 5439090432 0x115AD7: allocate (TrackerAllocator.hpp:65)
+    n1: 5439090432 0x115AD7: allocate (alloc_traits.h:318)
+     n1: 5439090432 0x115AD7: _M_get_node (stl_list.h:443)
+      n1: 5439090432 0x115AD7: _M_create_node<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:635)
+       n1: 5439090432 0x115AD7: _M_insert<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:1912)
+        n1: 5439090432 0x115AD7: push_back (stl_list.h:1213)
+         n1: 5439090432 0x115AD7: addTask (MonoQueueDispatcher.hpp:147)
+          n1: 5439090432 0x115AD7: resolveTask (SynchronizedWorker.hpp:124)
+           n1: 5439090432 0x115AD7: work (SynchronizedWorker.hpp:53)
+            n2: 5439090432 0x115AD7: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) [clone ._omp_fn.0] (SynchronizedResolver.hpp:126)
+             n1: 4766636784 0x4880C0D: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 4766636784 0x4CE0AC2: start_thread (pthread_create.c:442)
+               n0: 4766636784 0x4D71A03: clone (clone.S:100)
+             n1: 672453648 0x4877A15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 672453648 0x115431: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (SynchronizedResolver.hpp:76)
+               n0: 672453648 0x111706: main (noMain.cpp:32)
+ n0: 81908 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=40
+#-----------
+time=125911283956
+mem_heap_B=5402278724
+mem_heap_extra_B=900366516
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=130371720220
+mem_heap_B=5340881108
+mem_heap_extra_B=890133580
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=133047981981
+mem_heap_B=5295116516
+mem_heap_extra_B=882506148
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=137508418109
+mem_heap_B=5234094644
+mem_heap_extra_B=872335836
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=141968854353
+mem_heap_B=5195747396
+mem_heap_extra_B=865944628
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=144645116064
+mem_heap_B=5172089108
+mem_heap_extra_B=862001580
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=148213465435
+mem_heap_B=5132602052
+mem_heap_extra_B=855420404
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=150889727132
+mem_heap_B=5108470388
+mem_heap_extra_B=851398460
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=154458076087
+mem_heap_B=5052143348
+mem_heap_extra_B=842010620
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=157134337884
+mem_heap_B=5019620420
+mem_heap_extra_B=836590132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=159496606509
+mem_heap_B=4993589300
+mem_heap_extra_B=832251612
+mem_stacks_B=0
+heap_tree=detailed
+n2: 4993589300 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 4993507392 0x115AD7: allocate (new_allocator.h:127)
+  n1: 4993507392 0x115AD7: allocate (alloc_traits.h:464)
+   n1: 4993507392 0x115AD7: allocate (TrackerAllocator.hpp:65)
+    n1: 4993507392 0x115AD7: allocate (alloc_traits.h:318)
+     n1: 4993507392 0x115AD7: _M_get_node (stl_list.h:443)
+      n1: 4993507392 0x115AD7: _M_create_node<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:635)
+       n1: 4993507392 0x115AD7: _M_insert<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:1912)
+        n1: 4993507392 0x115AD7: push_back (stl_list.h:1213)
+         n1: 4993507392 0x115AD7: addTask (MonoQueueDispatcher.hpp:147)
+          n1: 4993507392 0x115AD7: resolveTask (SynchronizedWorker.hpp:124)
+           n1: 4993507392 0x115AD7: work (SynchronizedWorker.hpp:53)
+            n2: 4993507392 0x115AD7: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) [clone ._omp_fn.0] (SynchronizedResolver.hpp:126)
+             n1: 4358388000 0x4880C0D: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 4358388000 0x4CE0AC2: start_thread (pthread_create.c:442)
+               n0: 4358388000 0x4D71A03: clone (clone.S:100)
+             n1: 635119392 0x4877A15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 635119392 0x115431: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (SynchronizedResolver.hpp:76)
+               n0: 635119392 0x111706: main (noMain.cpp:32)
+ n0: 81908 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=51
+#-----------
+time=161858874926
+mem_heap_B=4954564820
+mem_heap_extra_B=825747532
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=164779321886
+mem_heap_B=4920352964
+mem_heap_extra_B=820045556
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=167141590182
+mem_heap_B=4781801924
+mem_heap_extra_B=796953716
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=169503858777
+mem_heap_B=4641904340
+mem_heap_extra_B=773637452
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=171866127060
+mem_heap_B=4495147556
+mem_heap_extra_B=749177988
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=174228395567
+mem_heap_B=4353721316
+mem_heap_extra_B=725606948
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=176590664132
+mem_heap_B=4208453444
+mem_heap_extra_B=701395636
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=178952932760
+mem_heap_B=4062488756
+mem_heap_extra_B=677068188
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=181315201135
+mem_heap_B=3916720868
+mem_heap_extra_B=652773540
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=183677469797
+mem_heap_B=3772738580
+mem_heap_extra_B=628776492
+mem_stacks_B=0
+heap_tree=detailed
+n2: 3772738580 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3772656672 0x115AD7: allocate (new_allocator.h:127)
+  n1: 3772656672 0x115AD7: allocate (alloc_traits.h:464)
+   n1: 3772656672 0x115AD7: allocate (TrackerAllocator.hpp:65)
+    n1: 3772656672 0x115AD7: allocate (alloc_traits.h:318)
+     n1: 3772656672 0x115AD7: _M_get_node (stl_list.h:443)
+      n1: 3772656672 0x115AD7: _M_create_node<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:635)
+       n1: 3772656672 0x115AD7: _M_insert<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:1912)
+        n1: 3772656672 0x115AD7: push_back (stl_list.h:1213)
+         n1: 3772656672 0x115AD7: addTask (MonoQueueDispatcher.hpp:147)
+          n1: 3772656672 0x115AD7: resolveTask (SynchronizedWorker.hpp:124)
+           n1: 3772656672 0x115AD7: work (SynchronizedWorker.hpp:53)
+            n2: 3772656672 0x115AD7: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) [clone ._omp_fn.0] (SynchronizedResolver.hpp:126)
+             n1: 3540552240 0x4880C0D: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 3540552240 0x4CE0AC2: start_thread (pthread_create.c:442)
+               n0: 3540552240 0x4D71A03: clone (clone.S:100)
+             n1: 232104432 0x4877A15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 232104432 0x115431: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (SynchronizedResolver.hpp:76)
+               n0: 232104432 0x111706: main (noMain.cpp:32)
+ n0: 81908 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=61
+#-----------
+time=186039738208
+mem_heap_B=3624692420
+mem_heap_extra_B=604102132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=188402006497
+mem_heap_B=3477354884
+mem_heap_extra_B=579545876
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=190764275134
+mem_heap_B=3332361476
+mem_heap_extra_B=555380308
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=193126543748
+mem_heap_B=3186545636
+mem_heap_extra_B=531077668
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=195488812265
+mem_heap_B=3041230676
+mem_heap_extra_B=506858508
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=197851080699
+mem_heap_B=2900471876
+mem_heap_extra_B=483398708
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=200213349355
+mem_heap_B=2751750116
+mem_heap_extra_B=458611748
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=202575618059
+mem_heap_B=2608547204
+mem_heap_extra_B=434744596
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=204937886576
+mem_heap_B=2462144324
+mem_heap_extra_B=410344116
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=207300155248
+mem_heap_B=2322266708
+mem_heap_extra_B=387031180
+mem_stacks_B=0
+heap_tree=detailed
+n2: 2322266708 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2322184800 0x115AD7: allocate (new_allocator.h:127)
+  n1: 2322184800 0x115AD7: allocate (alloc_traits.h:464)
+   n1: 2322184800 0x115AD7: allocate (TrackerAllocator.hpp:65)
+    n1: 2322184800 0x115AD7: allocate (alloc_traits.h:318)
+     n1: 2322184800 0x115AD7: _M_get_node (stl_list.h:443)
+      n1: 2322184800 0x115AD7: _M_create_node<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:635)
+       n1: 2322184800 0x115AD7: _M_insert<const LRDF::Aruka::Task<2, 14>&> (stl_list.h:1912)
+        n1: 2322184800 0x115AD7: push_back (stl_list.h:1213)
+         n1: 2322184800 0x115AD7: addTask (MonoQueueDispatcher.hpp:147)
+          n1: 2322184800 0x115AD7: resolveTask (SynchronizedWorker.hpp:124)
+           n1: 2322184800 0x115AD7: work (SynchronizedWorker.hpp:53)
+            n2: 2322184800 0x115AD7: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) [clone ._omp_fn.0] (SynchronizedResolver.hpp:126)
+             n1: 2090080368 0x4880C0D: ??? (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 2090080368 0x4CE0AC2: start_thread (pthread_create.c:442)
+               n0: 2090080368 0x4D71A03: clone (clone.S:100)
+             n1: 232104432 0x4877A15: GOMP_parallel (in /usr/lib/x86_64-linux-gnu/libgomp.so.1.0.0)
+              n1: 232104432 0x115431: LRDF::Aruka::OpenMP::SynchronizedResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::SynchronizedWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::OpenMP::MonoQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (SynchronizedResolver.hpp:76)
+               n0: 232104432 0x111706: main (noMain.cpp:32)
+ n0: 81908 in 13 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=71
+#-----------
+time=209662423812
+mem_heap_B=2178870068
+mem_heap_extra_B=363131740
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=212024692298
+mem_heap_B=2031100292
+mem_heap_extra_B=338503444
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=214386960949
+mem_heap_B=1885521908
+mem_heap_extra_B=314240380
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=216749229476
+mem_heap_B=1604000420
+mem_heap_extra_B=267320116
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=219111497811
+mem_heap_B=1322465396
+mem_heap_extra_B=220397612
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=221473766178
+mem_heap_B=1041024212
+mem_heap_extra_B=173490748
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=223836034734
+mem_heap_B=759524468
+mem_heap_extra_B=126574124
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=226198303238
+mem_heap_B=478038212
+mem_heap_extra_B=79659748
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=228560571727
+mem_heap_B=196595348
+mem_heap_extra_B=32752604
+mem_stacks_B=0
+heap_tree=empty

@@ -1,0 +1,18 @@
+@startjson
+{
+    "id": "uint",
+    "workersId": [
+        "uint"
+    ],
+    "events": [
+        {
+            "duration": "ms",
+            "orderKey": "int",
+            "numberInput": "?uint",
+            "numberOutput": "?uint",
+            "workerId": "?uint",
+            "type": "DispatcherEventType"
+        }
+    ]
+}
+@endjson

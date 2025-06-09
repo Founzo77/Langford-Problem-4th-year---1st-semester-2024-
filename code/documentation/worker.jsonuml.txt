@@ -1,0 +1,15 @@
+@startjson
+{
+    "id": "int",
+    "events": [
+        {
+            "duration": "ms",
+            "orderKey": "int",
+            "numberInput": "?uint",
+            "numberOutput": "?uint",
+            "type": "WorkEventType"
+        }
+    ],
+    "workDuration": "ms"
+}
+@endjson

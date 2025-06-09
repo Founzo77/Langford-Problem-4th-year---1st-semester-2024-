@@ -1,0 +1,10 @@
+{
+    "initializationDuration": 0.8696470031281933,
+    "workDuration": 1473.9117510034703,
+    "mergeDuration": 929.1816689947154,
+    "nbWorkers": 14,
+    "nbDispatchers": 0,
+    "C": 2,
+    "F": 14,
+    "metaName": ""
+}

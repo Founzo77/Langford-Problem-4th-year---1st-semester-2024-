@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualisation des données</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold mb-4">Visualisation des données</h1>
+
+        <!-- Section Résolveur -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-2">Résolveur</h2>
+            <div class="bg-white shadow-md rounded p-4">
+                <ul>
+                    <li>Durée d initialisation: 0.4692710062954575 ms</li>
+                    <li>Durée de travail: 5014.738395999302 ms</li>
+                    <li>Durée de fusion: 0.001553999027237296 ms</li>
+                    <li>Nombre de workers: 4</li>
+                    <li>Nombre de dispatchers: 5</li>
+                    <li>Compteur: 2</li>
+                    <li>Fréquence: 13</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Section Statistiques Globales Dispatchers -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-2">Statistiques Globales des Dispatchers</h2>
+            <div class="bg-white shadow-md rounded p-4">
+                <table class="min-w-full bg-white">
+                    <thead>
+                        <tr>
+                            <th class="py-2 px-4 border-b">Type</th>
+                            <th class="py-2 px-4 border-b">Moyenne (ms)</th>
+                            <th class="py-2 px-4 border-b">Écart-type</th>
+                            <th class="py-2 px-4 border-b">Minimum</th>
+                            <th class="py-2 px-4 border-b">Maximum</th>
+                            <th class="py-2 px-4 border-b">Nombre</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td class="py-2 px-4 border-b">wait</td>
+                            <td class="py-2 px-4 border-b">84.6332106195041</td>
+                            <td class="py-2 px-4 border-b">268.56006181772716</td>
+                            <td class="py-2 px-4 border-b">1.599255483597517e-05</td>
+                            <td class="py-2 px-4 border-b">1239.0211580059258</td>
+                            <td class="py-2 px-4 border-b">50</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="py-2 px-4 border-b">Add</td>
+                            <td class="py-2 px-4 border-b">7.900234777480364e-05</td>
+                            <td class="py-2 px-4 border-b">0.0</td>
+                            <td class="py-2 px-4 border-b">7.900234777480364e-05</td>
+                            <td class="py-2 px-4 border-b">7.900234777480364e-05</td>
+                            <td class="py-2 px-4 border-b">1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="py-2 px-4 border-b">get</td>
+                            <td class="py-2 px-4 border-b">12.911516246183927</td>
+                            <td class="py-2 px-4 border-b">17.967343685662854</td>
+                            <td class="py-2 px-4 border-b">2.3006577976047993e-05</td>
+                            <td class="py-2 px-4 border-b">62.003507002373226</td>
+                            <td class="py-2 px-4 border-b">49</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Section Statistiques Globales Workers -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-2">Statistiques Globales des Workers</h2>
+            <div class="bg-white shadow-md rounded p-4">
+                <table class="min-w-full bg-white">
+                    <thead>
+                        <tr>
+                            <th class="py-2 px-4 border-b">Type</th>
+                            <th class="py-2 px-4 border-b">Moyenne (ms)</th>
+                            <th class="py-2 px-4 border-b">Écart-type</th>
+                            <th class="py-2 px-4 border-b">Minimum</th>
+                            <th class="py-2 px-4 border-b">Maximum</th>
+                            <th class="py-2 px-4 border-b">Nombre</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td class="py-2 px-4 border-b">wait</td>
+                            <td class="py-2 px-4 border-b">61.131482518808646</td>
+                            <td class="py-2 px-4 border-b">83.77604777319108</td>
+                            <td class="py-2 px-4 border-b">0.0019989965949207544</td>
+                            <td class="py-2 px-4 border-b">237.58155800169334</td>
+                            <td class="py-2 px-4 border-b">52</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="py-2 px-4 border-b">dispatch</td>
+                            <td class="py-2 px-4 border-b">0</td>
+                            <td class="py-2 px-4 border-b">0</td>
+                            <td class="py-2 px-4 border-b">0</td>
+                            <td class="py-2 px-4 border-b">0</td>
+                            <td class="py-2 px-4 border-b">0</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="py-2 px-4 border-b">task</td>
+                            <td class="py-2 px-4 border-b">324.36881507741276</td>
+                            <td class="py-2 px-4 border-b">424.47245036576606</td>
+                            <td class="py-2 px-4 border-b">3.0995579436421394e-05</td>
+                            <td class="py-2 px-4 border-b">1237.4778660014272</td>
+                            <td class="py-2 px-4 border-b">52</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </section>        
+
+        <!-- Section Dispatchers -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-2">Dispatchers</h2>
+            
+            <div x-data="{ open: false }" class="bg-white shadow-md rounded mb-4">
+                <div class="p-4 cursor-pointer" @click="open = !open">
+                    <h3 class="text-xl font-semibold mb-2">Dispatcher ID: 3</h3>
+                </div>
+                <div x-show="open" class="p-4">
+                    <!-- Images -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        
+                        <div>
+                            <img src="dispatcher_3_cumul_wait_add_get.png" alt="Cumul Attente Travail Dispatch">
+                        </div>
+                        
+                        
+                        <div>
+                            <img src="dispatcher_3_wait_add_get.png" alt="Attente Travail Dispatch">
+                        </div>
+                        
+                        
+                        <div>
+                            <img src="dispatcher_3_cumul_nb_tasks.png" alt="Cumul Nombre de Tâches">
+                        </div>
+                        
+                        
+                        <div>
+                            <h4 class="text-lg font-medium">Worker ID: 0</h4>
+                            <img src="dispatcher_3_worker_0_cumul_nb_tasks.png" alt="Cumul Nombre de Tâches par Worker">
+                        </div>
+                        
+                    </div>
+
+                    <!-- Statistiques -->
+                    <div class="mt-4">
+                        <h4 class="text-lg font-medium mb-2">Statistiques</h4>
+                        <table class="min-w-full bg-white">
+                            <thead>
+                                <tr>
+                                    <th class="py-2 px-4 border-b">Type</th>
+                                    <th class="py-2 px-4 border-b">Moyenne (ms)</th>
+                                    <th class="py-2 px-4 border-b">Écart-type</th>
+                                    <th class="py-2 px-4 border-b">Minimum</th>
+                                    <th class="py-2 px-4 border-b">Maximum</th>
+                                    <th class="py-2 px-4 border-b">Nombre</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td class="py-2 px-4 border-b">wait</td>
+                                    <td class="py-2 px-4 border-b">84.6332106195041</td>
+                                    <td class="py-2 px-4 border-b">268.56006181772716</td>
+                                    <td class="py-2 px-4 border-b">1.599255483597517e-05</td>
+                                    <td class="py-2 px-4 border-b">1239.0211580059258</td>
+                                    <td class="py-2 px-4 border-b">50</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="py-2 px-4 border-b">add</td>
+                                    <td class="py-2 px-4 border-b">7.900234777480364e-05</td>
+                                    <td class="py-2 px-4 border-b">0.0</td>
+                                    <td class="py-2 px-4 border-b">7.900234777480364e-05</td>
+                                    <td class="py-2 px-4 border-b">7.900234777480364e-05</td>
+                                    <td class="py-2 px-4 border-b">1</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="py-2 px-4 border-b">get</td>
+                                    <td class="py-2 px-4 border-b">12.911516246183927</td>
+                                    <td class="py-2 px-4 border-b">17.967343685662854</td>
+                                    <td class="py-2 px-4 border-b">2.3006577976047993e-05</td>
+                                    <td class="py-2 px-4 border-b">62.003507002373226</td>
+                                    <td class="py-2 px-4 border-b">49</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+
+        <!-- Section Workers -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-2">Workers</h2>
+            
+            <div x-data="{ open: false }" class="bg-white shadow-md rounded mb-4">
+                <div class="p-4 cursor-pointer" @click="open = !open">
+                    <h3 class="text-xl font-semibold mb-2">Worker ID: 0</h3>
+                </div>
+                <div x-show="open" class="p-4">
+                    <!-- Images -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        
+                        <div>
+                            <img src="worker_0_cumul_wait_work_dispatch.png" alt="Cumul Attente Travail Dispatch">
+                        </div>
+                        
+                        
+                        <div>
+                            <img src="worker_0_wait_work_dispatch.png" alt="Attente Travail Dispatch">
+                        </div>
+                        
+                    </div>
+
+                    <!-- Statistiques -->
+                    <div class="mt-4">
+                        <h4 class="text-lg font-medium mb-2">Statistiques</h4>
+                        <table class="min-w-full bg-white">
+                            <thead>
+                                <tr>
+                                    <th class="py-2 px-4 border-b">Type</th>
+                                    <th class="py-2 px-4 border-b">Moyenne (ms)</th>
+                                    <th class="py-2 px-4 border-b">Écart-type</th>
+                                    <th class="py-2 px-4 border-b">Minimum</th>
+                                    <th class="py-2 px-4 border-b">Maximum</th>
+                                    <th class="py-2 px-4 border-b">Nombre</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td class="py-2 px-4 border-b">wait</td>
+                                    <td class="py-2 px-4 border-b">67.48264607785342</td>
+                                    <td class="py-2 px-4 border-b">85.94831717190561</td>
+                                    <td class="py-2 px-4 border-b">0.0019989965949207544</td>
+                                    <td class="py-2 px-4 border-b">217.16653599287383</td>
+                                    <td class="py-2 px-4 border-b">13</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="py-2 px-4 border-b">task</td>
+                                    <td class="py-2 px-4 border-b">318.0753770788075</td>
+                                    <td class="py-2 px-4 border-b">419.8706477035201</td>
+                                    <td class="py-2 px-4 border-b">4.0003214962780476e-05</td>
+                                    <td class="py-2 px-4 border-b">1148.8023540005088</td>
+                                    <td class="py-2 px-4 border-b">13</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="py-2 px-4 border-b">dispatch</td>
+                                    <td class="py-2 px-4 border-b">0</td>
+                                    <td class="py-2 px-4 border-b">0</td>
+                                    <td class="py-2 px-4 border-b">0</td>
+                                    <td class="py-2 px-4 border-b">0</td>
+                                    <td class="py-2 px-4 border-b">0</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div x-data="{ open: false }" class="bg-white shadow-md rounded mb-4">
+                <div class="p-4 cursor-pointer" @click="open = !open">
+                    <h3 class="text-xl font-semibold mb-2">Worker ID: 1</h3>
+                </div>
+                <div x-show="open" class="p-4">
+                    <!-- Images -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        
+                        <div>
+                            <img src="worker_1_cumul_wait_work_dispatch.png" alt="Cumul Attente Travail Dispatch">
+                        </div>
+                        
+                        
+                        <div>
+                            <img src="worker_1_wait_work_dispatch.png" alt="Attente Travail Dispatch">
+                        </div>
+                        
+                    </div>
+
+                    <!-- Statistiques -->
+                    <div class="mt-4">
+                        <h4 class="text-lg font-medium mb-2">Statistiques</h4>
+                        <table class="min-w-full bg-white">
+                            <thead>
+                                <tr>
+                                    <th class="py-2 px-4 border-b">Type</th>
+                                    <th class="py-2 px-4 border-b">Moyenne (ms)</th>
+                                    <th class="py-2 px-4 border-b">Écart-type</th>
+                                    <th class="py-2 px-4 border-b">Minimum</th>
+                                    <th class="py-2 px-4 border-b">Maximum</th>
+                                    <th class="py-2 px-4 border-b">Nombre</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td class="py-2 px-4 border-b">wait</td>
+                                    <td class="py-2 px-4 border-b">60.60892315200852</td>
+                                    <td class="py-2 px-4 border-b">79.05136750783726</td>
+                                    <td class="py-2 px-4 border-b">0.002201006282120943</td>
+                                    <td class="py-2 px-4 border-b">216.53117799723987</td>
+                                    <td class="py-2 px-4 border-b">13</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="py-2 px-4 border-b">task</td>
+                                    <td class="py-2 px-4 border-b">324.6299045388766</td>
+                                    <td class="py-2 px-4 border-b">427.69118407137535</td>
+                                    <td class="py-2 px-4 border-b">0.0021650048438459635</td>
+                                    <td class="py-2 px-4 border-b">1176.937377997092</td>
+                                    <td class="py-2 px-4 border-b">13</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="py-2 px-4 border-b">dispatch</td>
+                                    <td class="py-2 px-4 border-b">0</td>
+                                    <td class="py-2 px-4 border-b">0</td>
+                                    <td class="py-2 px-4 border-b">0</td>
+                                    <td class="py-2 px-4 border-b">0</td>
+                                    <td class="py-2 px-4 border-b">0</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div x-data="{ open: false }" class="bg-white shadow-md rounded mb-4">
+                <div class="p-4 cursor-pointer" @click="open = !open">
+                    <h3 class="text-xl font-semibold mb-2">Worker ID: 2</h3>
+                </div>
+                <div x-show="open" class="p-4">
+                    <!-- Images -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        
+                        <div>
+                            <img src="worker_2_cumul_wait_work_dispatch.png" alt="Cumul Attente Travail Dispatch">
+                        </div>
+                        
+                        
+                        <div>
+                            <img src="worker_2_wait_work_dispatch.png" alt="Attente Travail Dispatch">
+                        </div>
+                        
+                    </div>
+
+                    <!-- Statistiques -->
+                    <div class="mt-4">
+                        <h4 class="text-lg font-medium mb-2">Statistiques</h4>
+                        <table class="min-w-full bg-white">
+                            <thead>
+                                <tr>
+                                    <th class="py-2 px-4 border-b">Type</th>
+                                    <th class="py-2 px-4 border-b">Moyenne (ms)</th>
+                                    <th class="py-2 px-4 border-b">Écart-type</th>
+                                    <th class="py-2 px-4 border-b">Minimum</th>
+                                    <th class="py-2 px-4 border-b">Maximum</th>
+                                    <th class="py-2 px-4 border-b">Nombre</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td class="py-2 px-4 border-b">wait</td>
+                                    <td class="py-2 px-4 border-b">59.05681938412062</td>
+                                    <td class="py-2 px-4 border-b">86.35963018133543</td>
+                                    <td class="py-2 px-4 border-b">0.003210996510460973</td>
+                                    <td class="py-2 px-4 border-b">229.86849800508935</td>
+                                    <td class="py-2 px-4 border-b">13</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="py-2 px-4 border-b">task</td>
+                                    <td class="py-2 px-4 border-b">326.3990140761822</td>
+                                    <td class="py-2 px-4 border-b">421.2534340710484</td>
+                                    <td class="py-2 px-4 border-b">3.0995579436421394e-05</td>
+                                    <td class="py-2 px-4 border-b">1165.816641994752</td>
+                                    <td class="py-2 px-4 border-b">13</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="py-2 px-4 border-b">dispatch</td>
+                                    <td class="py-2 px-4 border-b">0</td>
+                                    <td class="py-2 px-4 border-b">0</td>
+                                    <td class="py-2 px-4 border-b">0</td>
+                                    <td class="py-2 px-4 border-b">0</td>
+                                    <td class="py-2 px-4 border-b">0</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+            <div x-data="{ open: false }" class="bg-white shadow-md rounded mb-4">
+                <div class="p-4 cursor-pointer" @click="open = !open">
+                    <h3 class="text-xl font-semibold mb-2">Worker ID: 3</h3>
+                </div>
+                <div x-show="open" class="p-4">
+                    <!-- Images -->
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        
+                        <div>
+                            <img src="worker_3_cumul_wait_work_dispatch.png" alt="Cumul Attente Travail Dispatch">
+                        </div>
+                        
+                        
+                        <div>
+                            <img src="worker_3_wait_work_dispatch.png" alt="Attente Travail Dispatch">
+                        </div>
+                        
+                    </div>
+
+                    <!-- Statistiques -->
+                    <div class="mt-4">
+                        <h4 class="text-lg font-medium mb-2">Statistiques</h4>
+                        <table class="min-w-full bg-white">
+                            <thead>
+                                <tr>
+                                    <th class="py-2 px-4 border-b">Type</th>
+                                    <th class="py-2 px-4 border-b">Moyenne (ms)</th>
+                                    <th class="py-2 px-4 border-b">Écart-type</th>
+                                    <th class="py-2 px-4 border-b">Minimum</th>
+                                    <th class="py-2 px-4 border-b">Maximum</th>
+                                    <th class="py-2 px-4 border-b">Nombre</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                
+                                <tr>
+                                    <td class="py-2 px-4 border-b">wait</td>
+                                    <td class="py-2 px-4 border-b">57.37754146125204</td>
+                                    <td class="py-2 px-4 border-b">83.1894249286152</td>
+                                    <td class="py-2 px-4 border-b">0.003116991138085723</td>
+                                    <td class="py-2 px-4 border-b">237.58155800169334</td>
+                                    <td class="py-2 px-4 border-b">13</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="py-2 px-4 border-b">task</td>
+                                    <td class="py-2 px-4 border-b">328.3709646157849</td>
+                                    <td class="py-2 px-4 border-b">428.93130520821165</td>
+                                    <td class="py-2 px-4 border-b">3.199966158717871e-05</td>
+                                    <td class="py-2 px-4 border-b">1237.4778660014272</td>
+                                    <td class="py-2 px-4 border-b">13</td>
+                                </tr>
+                                
+                                <tr>
+                                    <td class="py-2 px-4 border-b">dispatch</td>
+                                    <td class="py-2 px-4 border-b">0</td>
+                                    <td class="py-2 px-4 border-b">0</td>
+                                    <td class="py-2 px-4 border-b">0</td>
+                                    <td class="py-2 px-4 border-b">0</td>
+                                    <td class="py-2 px-4 border-b">0</td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            
+        </section>
+    </div>
+
+</body>
+</html>

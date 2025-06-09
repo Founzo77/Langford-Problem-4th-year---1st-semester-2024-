@@ -1,0 +1,50 @@
+@startuml
+
+left to right direction
+
+package "DU : Programmation" {
+	actor Développeur as D
+
+	usecase "Resoudre le probleme L(C, F)" as U1
+	usecase "Changer la strategie d'allocation de la memoire des taches" as U2
+	usecase "Changer la méthode principale de resolution du probleme (méthode Aruka ou autre...)" as U3
+	usecase "Changer le fonctionnement d'un worker pour la méthode principale utilise (OpenMp, MPI, ...)" as U4
+	usecase "Changer la strategie d'attribution des taches a chaque worker" as U5
+	usecase "Avoir la durée total de travail de chaque worker" as U6
+	usecase "Avoir le temps d'attente d'un worker" as U7
+	usecase "Avoir le temps de calcul pour chaque tache" as U8
+	usecase "Avoir le nombre de tache effectuer pour chaque worker" as U9
+	usecase "Avoir la memoire utiliser pour chaque worker" as U10
+	usecase "Avoir le nombre de solution apporte par chaque worker" as U11
+	usecase "Avoir le temps total pour la recuperation d'une tache (inclus l'attente)" as U12
+	usecase "Avoir la position des solutions dans l'arbre" as U13
+
+	D --> U1
+	D --> U2
+	D --> U3
+	D --> U4
+	D --> U5
+	D --> U6
+	D --> U7
+	D --> U8
+	D --> U9
+	D --> U10
+	D --> U11
+	D --> U12
+	D --> U13
+	
+}
+
+package "DU : Programme" {
+	actor Utilisateur as U
+
+	usecase "Resoudre le probleme L(C, F)" as J1
+	usecase "Changer le nombre de worker" as J2
+	usecase "Lancer la campagne de teste pour OpenMP ou MPI pour [L(X, Y) ...]" as J3
+
+	U --> J1
+	U --> J2
+	U --> J3
+}
+
+@enduml

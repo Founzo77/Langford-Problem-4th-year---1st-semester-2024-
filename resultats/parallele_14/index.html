@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Comparaison des Stratégies</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <div class="container mx-auto p-4">
+        <h1 class="text-3xl font-bold mb-4">Comparaison des Stratégies</h1>
+
+        <!-- Section Graphiques -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-2">Graphiques</h2>
+            <div class="bg-white shadow-md rounded p-4">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                        <img src="compare_execution_over_worker.png" alt="Exécution en fonction des travailleurs">
+                    </div>
+                    <div>
+                        <img src="compare_acceleration_over_worker.png" alt="Accélération en fonction des travailleurs">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Statistiques -->
+        <section class="mb-8">
+            <h2 class="text-2xl font-semibold mb-2">Statistiques</h2>
+            <div class="bg-white shadow-md rounded p-4">
+                <table class="min-w-full bg-white">
+                    <thead>
+                        <tr>
+                            <th class="py-2 px-4 border-b">Nom de la Stratégie</th>
+                            <th class="py-2 px-4 border-b">Temps d'Exécution (ms)</th>
+                            <th class="py-2 px-4 border-b">Accélération</th>
+                            <th class="py-2 px-4 border-b">Nombre de Travailleurs</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        <tr>
+                            <td class="py-2 px-4 border-b"></td>
+                            <td class="py-2 px-4 border-b">27006.86147098895</td>
+                            <td class="py-2 px-4 border-b">1.0</td>
+                            <td class="py-2 px-4 border-b">1</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="py-2 px-4 border-b"></td>
+                            <td class="py-2 px-4 border-b">12716.987070001778</td>
+                            <td class="py-2 px-4 border-b">2.1236839608570253</td>
+                            <td class="py-2 px-4 border-b">2</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="py-2 px-4 border-b"></td>
+                            <td class="py-2 px-4 border-b">8529.960731000756</td>
+                            <td class="py-2 px-4 border-b">3.166117913396354</td>
+                            <td class="py-2 px-4 border-b">3</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="py-2 px-4 border-b"></td>
+                            <td class="py-2 px-4 border-b">6847.40487599629</td>
+                            <td class="py-2 px-4 border-b">3.9441017378221677</td>
+                            <td class="py-2 px-4 border-b">4</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="py-2 px-4 border-b"></td>
+                            <td class="py-2 px-4 border-b">5422.951489992556</td>
+                            <td class="py-2 px-4 border-b">4.980103827376487</td>
+                            <td class="py-2 px-4 border-b">5</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="py-2 px-4 border-b"></td>
+                            <td class="py-2 px-4 border-b">5187.196205020882</td>
+                            <td class="py-2 px-4 border-b">5.206446874873944</td>
+                            <td class="py-2 px-4 border-b">6</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="py-2 px-4 border-b"></td>
+                            <td class="py-2 px-4 border-b">4752.294949008501</td>
+                            <td class="py-2 px-4 border-b">5.682909365005544</td>
+                            <td class="py-2 px-4 border-b">7</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="py-2 px-4 border-b"></td>
+                            <td class="py-2 px-4 border-b">4889.149623020785</td>
+                            <td class="py-2 px-4 border-b">5.523836158301621</td>
+                            <td class="py-2 px-4 border-b">8</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="py-2 px-4 border-b"></td>
+                            <td class="py-2 px-4 border-b">4596.051389031345</td>
+                            <td class="py-2 px-4 border-b">5.876100849403441</td>
+                            <td class="py-2 px-4 border-b">9</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="py-2 px-4 border-b"></td>
+                            <td class="py-2 px-4 border-b">4762.561612005811</td>
+                            <td class="py-2 px-4 border-b">5.670658706631341</td>
+                            <td class="py-2 px-4 border-b">10</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="py-2 px-4 border-b"></td>
+                            <td class="py-2 px-4 border-b">4834.105238012853</td>
+                            <td class="py-2 px-4 border-b">5.586734285100217</td>
+                            <td class="py-2 px-4 border-b">11</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="py-2 px-4 border-b"></td>
+                            <td class="py-2 px-4 border-b">4483.364184008678</td>
+                            <td class="py-2 px-4 border-b">6.02379382146054</td>
+                            <td class="py-2 px-4 border-b">12</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="py-2 px-4 border-b"></td>
+                            <td class="py-2 px-4 border-b">4408.397934996174</td>
+                            <td class="py-2 px-4 border-b">6.1262304059700075</td>
+                            <td class="py-2 px-4 border-b">13</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="py-2 px-4 border-b"></td>
+                            <td class="py-2 px-4 border-b">4958.674746987526</td>
+                            <td class="py-2 px-4 border-b">5.446386958006482</td>
+                            <td class="py-2 px-4 border-b">14</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="py-2 px-4 border-b"></td>
+                            <td class="py-2 px-4 border-b">4477.1524839889025</td>
+                            <td class="py-2 px-4 border-b">6.032151365755425</td>
+                            <td class="py-2 px-4 border-b">15</td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="py-2 px-4 border-b"></td>
+                            <td class="py-2 px-4 border-b">4616.752069996437</td>
+                            <td class="py-2 px-4 border-b">5.849753476367596</td>
+                            <td class="py-2 px-4 border-b">16</td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+</body>
+</html>

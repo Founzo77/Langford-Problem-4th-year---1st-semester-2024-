@@ -1,0 +1,1009 @@
+desc: (none)
+cmd: ./noMain
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=4206373701
+mem_heap_B=489192482
+mem_heap_extra_B=9183494
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=7504078196
+mem_heap_B=794540002
+mem_heap_extra_B=14759494
+mem_stacks_B=0
+heap_tree=detailed
+n3: 794540002 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 752521830 0x1143BA: allocate (new_allocator.h:127)
+  n1: 752521830 0x1143BA: allocate (alloc_traits.h:464)
+   n1: 752521830 0x1143BA: allocate (TrackerAllocator.hpp:65)
+    n1: 752521830 0x1143BA: allocate (alloc_traits.h:318)
+     n1: 752521830 0x1143BA: _M_allocate_node (stl_deque.h:562)
+      n1: 752521830 0x1143BA: void std::deque<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker> >::_M_push_back_aux<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&>(LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&) (deque.tcc:497)
+       n1: 752521830 0x114C56: push_back (stl_deque.h:1506)
+        n1: 752521830 0x114C56: push (stl_queue.h:266)
+         n1: 752521830 0x114C56: addTask (StandardQueueDispatcher.hpp:92)
+          n1: 752521830 0x114C56: resolveTask (StandardWorker.hpp:125)
+           n1: 752521830 0x114C56: work (StandardWorker.hpp:57)
+            n1: 752521830 0x114C56: LRDF::Aruka::Mono::StandardResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (StandardResolver.hpp:71)
+             n0: 752521830 0x110727: main (noMain.cpp:32)
+ n1: 41943024 0x114463: allocate (new_allocator.h:127)
+  n1: 41943024 0x114463: allocate (alloc_traits.h:464)
+   n1: 41943024 0x114463: allocate (TrackerAllocator.hpp:65)
+    n1: 41943024 0x114463: allocate (alloc_traits.h:318)
+     n1: 41943024 0x114463: _M_allocate_map (stl_deque.h:576)
+      n1: 41943024 0x114463: _M_reallocate_map (deque.tcc:959)
+       n1: 41943024 0x114463: _M_reserve_map_at_back (stl_deque.h:2130)
+        n1: 41943024 0x114463: void std::deque<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker> >::_M_push_back_aux<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&>(LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&) (deque.tcc:496)
+         n1: 41943024 0x114C56: push_back (stl_deque.h:1506)
+          n1: 41943024 0x114C56: push (stl_queue.h:266)
+           n1: 41943024 0x114C56: addTask (StandardQueueDispatcher.hpp:92)
+            n1: 41943024 0x114C56: resolveTask (StandardWorker.hpp:125)
+             n1: 41943024 0x114C56: work (StandardWorker.hpp:57)
+              n1: 41943024 0x114C56: LRDF::Aruka::Mono::StandardResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (StandardResolver.hpp:71)
+               n0: 41943024 0x110727: main (noMain.cpp:32)
+ n0: 75148 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=3
+#-----------
+time=10422687911
+mem_heap_B=1059367702
+mem_heap_extra_B=19952194
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=12676559403
+mem_heap_B=1224246622
+mem_heap_extra_B=23185114
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=16205418250
+mem_heap_B=1408797262
+mem_heap_extra_B=26803738
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=18467195523
+mem_heap_B=1524119482
+mem_heap_extra_B=29064958
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=20864053060
+mem_heap_B=1658388202
+mem_heap_extra_B=31697678
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1658388202 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1616370030 0x1143BA: allocate (new_allocator.h:127)
+  n1: 1616370030 0x1143BA: allocate (alloc_traits.h:464)
+   n1: 1616370030 0x1143BA: allocate (TrackerAllocator.hpp:65)
+    n1: 1616370030 0x1143BA: allocate (alloc_traits.h:318)
+     n1: 1616370030 0x1143BA: _M_allocate_node (stl_deque.h:562)
+      n1: 1616370030 0x1143BA: void std::deque<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker> >::_M_push_back_aux<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&>(LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&) (deque.tcc:497)
+       n1: 1616370030 0x114C56: push_back (stl_deque.h:1506)
+        n1: 1616370030 0x114C56: push (stl_queue.h:266)
+         n1: 1616370030 0x114C56: addTask (StandardQueueDispatcher.hpp:92)
+          n1: 1616370030 0x114C56: resolveTask (StandardWorker.hpp:125)
+           n1: 1616370030 0x114C56: work (StandardWorker.hpp:57)
+            n1: 1616370030 0x114C56: LRDF::Aruka::Mono::StandardResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (StandardResolver.hpp:71)
+             n0: 1616370030 0x110727: main (noMain.cpp:32)
+ n1: 41943024 0x114463: allocate (new_allocator.h:127)
+  n1: 41943024 0x114463: allocate (alloc_traits.h:464)
+   n1: 41943024 0x114463: allocate (TrackerAllocator.hpp:65)
+    n1: 41943024 0x114463: allocate (alloc_traits.h:318)
+     n1: 41943024 0x114463: _M_allocate_map (stl_deque.h:576)
+      n1: 41943024 0x114463: _M_reallocate_map (deque.tcc:959)
+       n1: 41943024 0x114463: _M_reserve_map_at_back (stl_deque.h:2130)
+        n1: 41943024 0x114463: void std::deque<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker> >::_M_push_back_aux<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&>(LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&) (deque.tcc:496)
+         n1: 41943024 0x114C56: push_back (stl_deque.h:1506)
+          n1: 41943024 0x114C56: push (stl_queue.h:266)
+           n1: 41943024 0x114C56: addTask (StandardQueueDispatcher.hpp:92)
+            n1: 41943024 0x114C56: resolveTask (StandardWorker.hpp:125)
+             n1: 41943024 0x114C56: work (StandardWorker.hpp:57)
+              n1: 41943024 0x114C56: LRDF::Aruka::Mono::StandardResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (StandardResolver.hpp:71)
+               n0: 41943024 0x110727: main (noMain.cpp:32)
+ n0: 75148 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=8
+#-----------
+time=24109025968
+mem_heap_B=1887441062
+mem_heap_extra_B=35366498
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=26614494866
+mem_heap_B=2030791352
+mem_heap_extra_B=38177288
+mem_stacks_B=0
+heap_tree=detailed
+n3: 2030791352 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1946830140 0x1143BA: allocate (new_allocator.h:127)
+  n1: 1946830140 0x1143BA: allocate (alloc_traits.h:464)
+   n1: 1946830140 0x1143BA: allocate (TrackerAllocator.hpp:65)
+    n1: 1946830140 0x1143BA: allocate (alloc_traits.h:318)
+     n1: 1946830140 0x1143BA: _M_allocate_node (stl_deque.h:562)
+      n1: 1946830140 0x1143BA: void std::deque<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker> >::_M_push_back_aux<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&>(LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&) (deque.tcc:497)
+       n1: 1946830140 0x114C56: push_back (stl_deque.h:1506)
+        n1: 1946830140 0x114C56: push (stl_queue.h:266)
+         n1: 1946830140 0x114C56: addTask (StandardQueueDispatcher.hpp:92)
+          n1: 1946830140 0x114C56: resolveTask (StandardWorker.hpp:125)
+           n1: 1946830140 0x114C56: work (StandardWorker.hpp:57)
+            n1: 1946830140 0x114C56: LRDF::Aruka::Mono::StandardResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (StandardResolver.hpp:71)
+             n0: 1946830140 0x110727: main (noMain.cpp:32)
+ n1: 83886064 0x114463: allocate (new_allocator.h:127)
+  n1: 83886064 0x114463: allocate (alloc_traits.h:464)
+   n1: 83886064 0x114463: allocate (TrackerAllocator.hpp:65)
+    n1: 83886064 0x114463: allocate (alloc_traits.h:318)
+     n1: 83886064 0x114463: _M_allocate_map (stl_deque.h:576)
+      n1: 83886064 0x114463: _M_reallocate_map (deque.tcc:959)
+       n1: 83886064 0x114463: _M_reserve_map_at_back (stl_deque.h:2130)
+        n1: 83886064 0x114463: void std::deque<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker> >::_M_push_back_aux<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&>(LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&) (deque.tcc:496)
+         n1: 83886064 0x114C56: push_back (stl_deque.h:1506)
+          n1: 83886064 0x114C56: push (stl_queue.h:266)
+           n1: 83886064 0x114C56: addTask (StandardQueueDispatcher.hpp:92)
+            n1: 83886064 0x114C56: resolveTask (StandardWorker.hpp:125)
+             n1: 83886064 0x114C56: work (StandardWorker.hpp:57)
+              n1: 83886064 0x114C56: LRDF::Aruka::Mono::StandardResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (StandardResolver.hpp:71)
+               n0: 83886064 0x110727: main (noMain.cpp:32)
+ n0: 75148 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=10
+#-----------
+time=29731007136
+mem_heap_B=2217173402
+mem_heap_extra_B=41831838
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=31636281903
+mem_heap_B=2334108752
+mem_heap_extra_B=44124688
+mem_stacks_B=0
+heap_tree=detailed
+n3: 2334108752 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2250147540 0x1143BA: allocate (new_allocator.h:127)
+  n1: 2250147540 0x1143BA: allocate (alloc_traits.h:464)
+   n1: 2250147540 0x1143BA: allocate (TrackerAllocator.hpp:65)
+    n1: 2250147540 0x1143BA: allocate (alloc_traits.h:318)
+     n1: 2250147540 0x1143BA: _M_allocate_node (stl_deque.h:562)
+      n1: 2250147540 0x1143BA: void std::deque<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker> >::_M_push_back_aux<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&>(LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&) (deque.tcc:497)
+       n1: 2250147540 0x114C56: push_back (stl_deque.h:1506)
+        n1: 2250147540 0x114C56: push (stl_queue.h:266)
+         n1: 2250147540 0x114C56: addTask (StandardQueueDispatcher.hpp:92)
+          n1: 2250147540 0x114C56: resolveTask (StandardWorker.hpp:125)
+           n1: 2250147540 0x114C56: work (StandardWorker.hpp:57)
+            n1: 2250147540 0x114C56: LRDF::Aruka::Mono::StandardResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (StandardResolver.hpp:71)
+             n0: 2250147540 0x110727: main (noMain.cpp:32)
+ n1: 83886064 0x114463: allocate (new_allocator.h:127)
+  n1: 83886064 0x114463: allocate (alloc_traits.h:464)
+   n1: 83886064 0x114463: allocate (TrackerAllocator.hpp:65)
+    n1: 83886064 0x114463: allocate (alloc_traits.h:318)
+     n1: 83886064 0x114463: _M_allocate_map (stl_deque.h:576)
+      n1: 83886064 0x114463: _M_reallocate_map (deque.tcc:959)
+       n1: 83886064 0x114463: _M_reserve_map_at_back (stl_deque.h:2130)
+        n1: 83886064 0x114463: void std::deque<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker> >::_M_push_back_aux<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&>(LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&) (deque.tcc:496)
+         n1: 83886064 0x114C56: push_back (stl_deque.h:1506)
+          n1: 83886064 0x114C56: push (stl_queue.h:266)
+           n1: 83886064 0x114C56: addTask (StandardQueueDispatcher.hpp:92)
+            n1: 83886064 0x114C56: resolveTask (StandardWorker.hpp:125)
+             n1: 83886064 0x114C56: work (StandardWorker.hpp:57)
+              n1: 83886064 0x114C56: LRDF::Aruka::Mono::StandardResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (StandardResolver.hpp:71)
+               n0: 83886064 0x110727: main (noMain.cpp:32)
+ n0: 75148 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=12
+#-----------
+time=34967876594
+mem_heap_B=2518711412
+mem_heap_extra_B=47744348
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=37364470233
+mem_heap_B=2584251002
+mem_heap_extra_B=49029438
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=41037802112
+mem_heap_B=2669598482
+mem_heap_extra_B=50702918
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=43216042610
+mem_heap_B=2719556042
+mem_heap_extra_B=51682478
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=46118900505
+mem_heap_B=2791629752
+mem_heap_extra_B=53095688
+mem_stacks_B=0
+heap_tree=detailed
+n3: 2791629752 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2707668540 0x1143BA: allocate (new_allocator.h:127)
+  n1: 2707668540 0x1143BA: allocate (alloc_traits.h:464)
+   n1: 2707668540 0x1143BA: allocate (TrackerAllocator.hpp:65)
+    n1: 2707668540 0x1143BA: allocate (alloc_traits.h:318)
+     n1: 2707668540 0x1143BA: _M_allocate_node (stl_deque.h:562)
+      n1: 2707668540 0x1143BA: void std::deque<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker> >::_M_push_back_aux<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&>(LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&) (deque.tcc:497)
+       n1: 2707668540 0x114C56: push_back (stl_deque.h:1506)
+        n1: 2707668540 0x114C56: push (stl_queue.h:266)
+         n1: 2707668540 0x114C56: addTask (StandardQueueDispatcher.hpp:92)
+          n1: 2707668540 0x114C56: resolveTask (StandardWorker.hpp:125)
+           n1: 2707668540 0x114C56: work (StandardWorker.hpp:57)
+            n1: 2707668540 0x114C56: LRDF::Aruka::Mono::StandardResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (StandardResolver.hpp:71)
+             n0: 2707668540 0x110727: main (noMain.cpp:32)
+ n1: 83886064 0x114463: allocate (new_allocator.h:127)
+  n1: 83886064 0x114463: allocate (alloc_traits.h:464)
+   n1: 83886064 0x114463: allocate (TrackerAllocator.hpp:65)
+    n1: 83886064 0x114463: allocate (alloc_traits.h:318)
+     n1: 83886064 0x114463: _M_allocate_map (stl_deque.h:576)
+      n1: 83886064 0x114463: _M_reallocate_map (deque.tcc:959)
+       n1: 83886064 0x114463: _M_reserve_map_at_back (stl_deque.h:2130)
+        n1: 83886064 0x114463: void std::deque<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker> >::_M_push_back_aux<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&>(LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&) (deque.tcc:496)
+         n1: 83886064 0x114C56: push_back (stl_deque.h:1506)
+          n1: 83886064 0x114C56: push (stl_queue.h:266)
+           n1: 83886064 0x114C56: addTask (StandardQueueDispatcher.hpp:92)
+            n1: 83886064 0x114C56: resolveTask (StandardWorker.hpp:125)
+             n1: 83886064 0x114C56: work (StandardWorker.hpp:57)
+              n1: 83886064 0x114C56: LRDF::Aruka::Mono::StandardResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (StandardResolver.hpp:71)
+               n0: 83886064 0x110727: main (noMain.cpp:32)
+ n0: 75148 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=17
+#-----------
+time=50603772223
+mem_heap_B=2904748262
+mem_heap_extra_B=55313698
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=52793213848
+mem_heap_B=2959835912
+mem_heap_extra_B=56393848
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=57018481054
+mem_heap_B=3071270402
+mem_heap_extra_B=58578838
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=60129318535
+mem_heap_B=3239461522
+mem_heap_extra_B=60231878
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=61894490497
+mem_heap_B=3285279412
+mem_heap_extra_B=61130268
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=65894643789
+mem_heap_B=3400301242
+mem_heap_extra_B=63385598
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=68275629168
+mem_heap_B=3464683132
+mem_heap_extra_B=64647988
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=72841658705
+mem_heap_B=3550662502
+mem_heap_extra_B=66333858
+mem_stacks_B=0
+heap_tree=detailed
+n3: 3550662502 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3382815210 0x1143BA: allocate (new_allocator.h:127)
+  n1: 3382815210 0x1143BA: allocate (alloc_traits.h:464)
+   n1: 3382815210 0x1143BA: allocate (TrackerAllocator.hpp:65)
+    n1: 3382815210 0x1143BA: allocate (alloc_traits.h:318)
+     n1: 3382815210 0x1143BA: _M_allocate_node (stl_deque.h:562)
+      n1: 3382815210 0x1143BA: void std::deque<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker> >::_M_push_back_aux<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&>(LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&) (deque.tcc:497)
+       n1: 3382815210 0x114C56: push_back (stl_deque.h:1506)
+        n1: 3382815210 0x114C56: push (stl_queue.h:266)
+         n1: 3382815210 0x114C56: addTask (StandardQueueDispatcher.hpp:92)
+          n1: 3382815210 0x114C56: resolveTask (StandardWorker.hpp:125)
+           n1: 3382815210 0x114C56: work (StandardWorker.hpp:57)
+            n1: 3382815210 0x114C56: LRDF::Aruka::Mono::StandardResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (StandardResolver.hpp:71)
+             n0: 3382815210 0x110727: main (noMain.cpp:32)
+ n1: 167772144 0x114463: allocate (new_allocator.h:127)
+  n1: 167772144 0x114463: allocate (alloc_traits.h:464)
+   n1: 167772144 0x114463: allocate (TrackerAllocator.hpp:65)
+    n1: 167772144 0x114463: allocate (alloc_traits.h:318)
+     n1: 167772144 0x114463: _M_allocate_map (stl_deque.h:576)
+      n1: 167772144 0x114463: _M_reallocate_map (deque.tcc:959)
+       n1: 167772144 0x114463: _M_reserve_map_at_back (stl_deque.h:2130)
+        n1: 167772144 0x114463: void std::deque<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker> >::_M_push_back_aux<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&>(LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&) (deque.tcc:496)
+         n1: 167772144 0x114C56: push_back (stl_deque.h:1506)
+          n1: 167772144 0x114C56: push (stl_queue.h:266)
+           n1: 167772144 0x114C56: addTask (StandardQueueDispatcher.hpp:92)
+            n1: 167772144 0x114C56: resolveTask (StandardWorker.hpp:125)
+             n1: 167772144 0x114C56: work (StandardWorker.hpp:57)
+              n1: 167772144 0x114C56: LRDF::Aruka::Mono::StandardResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (StandardResolver.hpp:71)
+               n0: 167772144 0x110727: main (noMain.cpp:32)
+ n0: 75148 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=25
+#-----------
+time=75694972445
+mem_heap_B=3620474362
+mem_heap_extra_B=67702718
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=78179646867
+mem_heap_B=3676013362
+mem_heap_extra_B=68791718
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=80973549039
+mem_heap_B=3731619172
+mem_heap_extra_B=69882028
+mem_stacks_B=0
+heap_tree=peak
+n3: 3731619172 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3563771880 0x1143BA: allocate (new_allocator.h:127)
+  n1: 3563771880 0x1143BA: allocate (alloc_traits.h:464)
+   n1: 3563771880 0x1143BA: allocate (TrackerAllocator.hpp:65)
+    n1: 3563771880 0x1143BA: allocate (alloc_traits.h:318)
+     n1: 3563771880 0x1143BA: _M_allocate_node (stl_deque.h:562)
+      n1: 3563771880 0x1143BA: void std::deque<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker> >::_M_push_back_aux<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&>(LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&) (deque.tcc:497)
+       n1: 3563771880 0x114C56: push_back (stl_deque.h:1506)
+        n1: 3563771880 0x114C56: push (stl_queue.h:266)
+         n1: 3563771880 0x114C56: addTask (StandardQueueDispatcher.hpp:92)
+          n1: 3563771880 0x114C56: resolveTask (StandardWorker.hpp:125)
+           n1: 3563771880 0x114C56: work (StandardWorker.hpp:57)
+            n1: 3563771880 0x114C56: LRDF::Aruka::Mono::StandardResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (StandardResolver.hpp:71)
+             n0: 3563771880 0x110727: main (noMain.cpp:32)
+ n1: 167772144 0x114463: allocate (new_allocator.h:127)
+  n1: 167772144 0x114463: allocate (alloc_traits.h:464)
+   n1: 167772144 0x114463: allocate (TrackerAllocator.hpp:65)
+    n1: 167772144 0x114463: allocate (alloc_traits.h:318)
+     n1: 167772144 0x114463: _M_allocate_map (stl_deque.h:576)
+      n1: 167772144 0x114463: _M_reallocate_map (deque.tcc:959)
+       n1: 167772144 0x114463: _M_reserve_map_at_back (stl_deque.h:2130)
+        n1: 167772144 0x114463: void std::deque<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker> >::_M_push_back_aux<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&>(LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&) (deque.tcc:496)
+         n1: 167772144 0x114C56: push_back (stl_deque.h:1506)
+          n1: 167772144 0x114C56: push (stl_queue.h:266)
+           n1: 167772144 0x114C56: addTask (StandardQueueDispatcher.hpp:92)
+            n1: 167772144 0x114C56: resolveTask (StandardWorker.hpp:125)
+             n1: 167772144 0x114C56: work (StandardWorker.hpp:57)
+              n1: 167772144 0x114C56: LRDF::Aruka::Mono::StandardResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (StandardResolver.hpp:71)
+               n0: 167772144 0x110727: main (noMain.cpp:32)
+ n0: 75148 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=28
+#-----------
+time=83770946081
+mem_heap_B=3714838132
+mem_heap_extra_B=69552988
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=85868991475
+mem_heap_B=3698403892
+mem_heap_extra_B=69230748
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=88666395680
+mem_heap_B=3684655822
+mem_heap_extra_B=68961178
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=93054782153
+mem_heap_B=3654366412
+mem_heap_extra_B=68367268
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=95345125259
+mem_heap_B=3642046342
+mem_heap_extra_B=68125698
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=97635467091
+mem_heap_B=3626004802
+mem_heap_extra_B=67811158
+mem_stacks_B=0
+heap_tree=detailed
+n3: 3626004802 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3458157510 0x1143BA: allocate (new_allocator.h:127)
+  n1: 3458157510 0x1143BA: allocate (alloc_traits.h:464)
+   n1: 3458157510 0x1143BA: allocate (TrackerAllocator.hpp:65)
+    n1: 3458157510 0x1143BA: allocate (alloc_traits.h:318)
+     n1: 3458157510 0x1143BA: _M_allocate_node (stl_deque.h:562)
+      n1: 3458157510 0x1143BA: void std::deque<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker> >::_M_push_back_aux<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&>(LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&) (deque.tcc:497)
+       n1: 3458157510 0x114C56: push_back (stl_deque.h:1506)
+        n1: 3458157510 0x114C56: push (stl_queue.h:266)
+         n1: 3458157510 0x114C56: addTask (StandardQueueDispatcher.hpp:92)
+          n1: 3458157510 0x114C56: resolveTask (StandardWorker.hpp:125)
+           n1: 3458157510 0x114C56: work (StandardWorker.hpp:57)
+            n1: 3458157510 0x114C56: LRDF::Aruka::Mono::StandardResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (StandardResolver.hpp:71)
+             n0: 3458157510 0x110727: main (noMain.cpp:32)
+ n1: 167772144 0x114463: allocate (new_allocator.h:127)
+  n1: 167772144 0x114463: allocate (alloc_traits.h:464)
+   n1: 167772144 0x114463: allocate (TrackerAllocator.hpp:65)
+    n1: 167772144 0x114463: allocate (alloc_traits.h:318)
+     n1: 167772144 0x114463: _M_allocate_map (stl_deque.h:576)
+      n1: 167772144 0x114463: _M_reallocate_map (deque.tcc:959)
+       n1: 167772144 0x114463: _M_reserve_map_at_back (stl_deque.h:2130)
+        n1: 167772144 0x114463: void std::deque<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker> >::_M_push_back_aux<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&>(LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&) (deque.tcc:496)
+         n1: 167772144 0x114C56: push_back (stl_deque.h:1506)
+          n1: 167772144 0x114C56: push (stl_queue.h:266)
+           n1: 167772144 0x114C56: addTask (StandardQueueDispatcher.hpp:92)
+            n1: 167772144 0x114C56: resolveTask (StandardWorker.hpp:125)
+             n1: 167772144 0x114C56: work (StandardWorker.hpp:57)
+              n1: 167772144 0x114C56: LRDF::Aruka::Mono::StandardResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (StandardResolver.hpp:71)
+               n0: 167772144 0x110727: main (noMain.cpp:32)
+ n0: 75148 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=34
+#-----------
+time=99925815598
+mem_heap_B=3607840132
+mem_heap_extra_B=67454988
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=103361338064
+mem_heap_B=3595395112
+mem_heap_extra_B=67210968
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=107942020758
+mem_heap_B=3559410532
+mem_heap_extra_B=66505388
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=110232361031
+mem_heap_B=3548931052
+mem_heap_extra_B=66299908
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=113667872768
+mem_heap_B=3528294922
+mem_heap_extra_B=65895278
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=115958215129
+mem_heap_B=3497250202
+mem_heap_extra_B=65286558
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=120538897960
+mem_heap_B=3444195922
+mem_heap_extra_B=64246278
+mem_stacks_B=0
+heap_tree=detailed
+n3: 3444195922 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3276348630 0x1143BA: allocate (new_allocator.h:127)
+  n1: 3276348630 0x1143BA: allocate (alloc_traits.h:464)
+   n1: 3276348630 0x1143BA: allocate (TrackerAllocator.hpp:65)
+    n1: 3276348630 0x1143BA: allocate (alloc_traits.h:318)
+     n1: 3276348630 0x1143BA: _M_allocate_node (stl_deque.h:562)
+      n1: 3276348630 0x1143BA: void std::deque<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker> >::_M_push_back_aux<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&>(LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&) (deque.tcc:497)
+       n1: 3276348630 0x114C56: push_back (stl_deque.h:1506)
+        n1: 3276348630 0x114C56: push (stl_queue.h:266)
+         n1: 3276348630 0x114C56: addTask (StandardQueueDispatcher.hpp:92)
+          n1: 3276348630 0x114C56: resolveTask (StandardWorker.hpp:125)
+           n1: 3276348630 0x114C56: work (StandardWorker.hpp:57)
+            n1: 3276348630 0x114C56: LRDF::Aruka::Mono::StandardResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (StandardResolver.hpp:71)
+             n0: 3276348630 0x110727: main (noMain.cpp:32)
+ n1: 167772144 0x114463: allocate (new_allocator.h:127)
+  n1: 167772144 0x114463: allocate (alloc_traits.h:464)
+   n1: 167772144 0x114463: allocate (TrackerAllocator.hpp:65)
+    n1: 167772144 0x114463: allocate (alloc_traits.h:318)
+     n1: 167772144 0x114463: _M_allocate_map (stl_deque.h:576)
+      n1: 167772144 0x114463: _M_reallocate_map (deque.tcc:959)
+       n1: 167772144 0x114463: _M_reserve_map_at_back (stl_deque.h:2130)
+        n1: 167772144 0x114463: void std::deque<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker> >::_M_push_back_aux<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&>(LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&) (deque.tcc:496)
+         n1: 167772144 0x114C56: push_back (stl_deque.h:1506)
+          n1: 167772144 0x114C56: push (stl_queue.h:266)
+           n1: 167772144 0x114C56: addTask (StandardQueueDispatcher.hpp:92)
+            n1: 167772144 0x114C56: resolveTask (StandardWorker.hpp:125)
+             n1: 167772144 0x114C56: work (StandardWorker.hpp:57)
+              n1: 167772144 0x114C56: LRDF::Aruka::Mono::StandardResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (StandardResolver.hpp:71)
+               n0: 167772144 0x110727: main (noMain.cpp:32)
+ n0: 75148 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=41
+#-----------
+time=122829249591
+mem_heap_B=3421235722
+mem_heap_extra_B=63796078
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=126264770911
+mem_heap_B=3390359812
+mem_heap_extra_B=63190668
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=128555115760
+mem_heap_B=3352893682
+mem_heap_extra_B=62456038
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=131990632326
+mem_heap_B=3320207782
+mem_heap_extra_B=61815138
+mem_stacks_B=0
+heap_tree=detailed
+n3: 3320207782 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3152360490 0x1143BA: allocate (new_allocator.h:127)
+  n1: 3152360490 0x1143BA: allocate (alloc_traits.h:464)
+   n1: 3152360490 0x1143BA: allocate (TrackerAllocator.hpp:65)
+    n1: 3152360490 0x1143BA: allocate (alloc_traits.h:318)
+     n1: 3152360490 0x1143BA: _M_allocate_node (stl_deque.h:562)
+      n1: 3152360490 0x1143BA: void std::deque<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker> >::_M_push_back_aux<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&>(LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&) (deque.tcc:497)
+       n1: 3152360490 0x114C56: push_back (stl_deque.h:1506)
+        n1: 3152360490 0x114C56: push (stl_queue.h:266)
+         n1: 3152360490 0x114C56: addTask (StandardQueueDispatcher.hpp:92)
+          n1: 3152360490 0x114C56: resolveTask (StandardWorker.hpp:125)
+           n1: 3152360490 0x114C56: work (StandardWorker.hpp:57)
+            n1: 3152360490 0x114C56: LRDF::Aruka::Mono::StandardResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (StandardResolver.hpp:71)
+             n0: 3152360490 0x110727: main (noMain.cpp:32)
+ n1: 167772144 0x114463: allocate (new_allocator.h:127)
+  n1: 167772144 0x114463: allocate (alloc_traits.h:464)
+   n1: 167772144 0x114463: allocate (TrackerAllocator.hpp:65)
+    n1: 167772144 0x114463: allocate (alloc_traits.h:318)
+     n1: 167772144 0x114463: _M_allocate_map (stl_deque.h:576)
+      n1: 167772144 0x114463: _M_reallocate_map (deque.tcc:959)
+       n1: 167772144 0x114463: _M_reserve_map_at_back (stl_deque.h:2130)
+        n1: 167772144 0x114463: void std::deque<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker> >::_M_push_back_aux<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&>(LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&) (deque.tcc:496)
+         n1: 167772144 0x114C56: push_back (stl_deque.h:1506)
+          n1: 167772144 0x114C56: push (stl_queue.h:266)
+           n1: 167772144 0x114C56: addTask (StandardQueueDispatcher.hpp:92)
+            n1: 167772144 0x114C56: resolveTask (StandardWorker.hpp:125)
+             n1: 167772144 0x114C56: work (StandardWorker.hpp:57)
+              n1: 167772144 0x114C56: LRDF::Aruka::Mono::StandardResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (StandardResolver.hpp:71)
+               n0: 167772144 0x110727: main (noMain.cpp:32)
+ n0: 75148 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=45
+#-----------
+time=134280978244
+mem_heap_B=3297531652
+mem_heap_extra_B=61370508
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=137716497918
+mem_heap_B=3267365662
+mem_heap_extra_B=60779018
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=141152015943
+mem_heap_B=3166362712
+mem_heap_extra_B=58798568
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=144587534963
+mem_heap_B=3027200542
+mem_heap_extra_B=56069898
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=148023048616
+mem_heap_B=2881557292
+mem_heap_extra_B=53214148
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=149788220674
+mem_heap_B=2812898542
+mem_heap_extra_B=51867898
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=151553399523
+mem_heap_B=2739781882
+mem_heap_extra_B=50434238
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=153318574825
+mem_heap_B=2663706712
+mem_heap_extra_B=48942568
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=155083752017
+mem_heap_B=2591117902
+mem_heap_extra_B=47519258
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=156848930764
+mem_heap_B=2520526252
+mem_heap_extra_B=46135108
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=158614103706
+mem_heap_B=2442894562
+mem_heap_extra_B=44612918
+mem_stacks_B=0
+heap_tree=detailed
+n3: 2442894562 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2275047270 0x1143BA: allocate (new_allocator.h:127)
+  n1: 2275047270 0x1143BA: allocate (alloc_traits.h:464)
+   n1: 2275047270 0x1143BA: allocate (TrackerAllocator.hpp:65)
+    n1: 2275047270 0x1143BA: allocate (alloc_traits.h:318)
+     n1: 2275047270 0x1143BA: _M_allocate_node (stl_deque.h:562)
+      n1: 2275047270 0x1143BA: void std::deque<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker> >::_M_push_back_aux<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&>(LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&) (deque.tcc:497)
+       n1: 2275047270 0x114C56: push_back (stl_deque.h:1506)
+        n1: 2275047270 0x114C56: push (stl_queue.h:266)
+         n1: 2275047270 0x114C56: addTask (StandardQueueDispatcher.hpp:92)
+          n1: 2275047270 0x114C56: resolveTask (StandardWorker.hpp:125)
+           n1: 2275047270 0x114C56: work (StandardWorker.hpp:57)
+            n1: 2275047270 0x114C56: LRDF::Aruka::Mono::StandardResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (StandardResolver.hpp:71)
+             n0: 2275047270 0x110727: main (noMain.cpp:32)
+ n1: 167772144 0x114463: allocate (new_allocator.h:127)
+  n1: 167772144 0x114463: allocate (alloc_traits.h:464)
+   n1: 167772144 0x114463: allocate (TrackerAllocator.hpp:65)
+    n1: 167772144 0x114463: allocate (alloc_traits.h:318)
+     n1: 167772144 0x114463: _M_allocate_map (stl_deque.h:576)
+      n1: 167772144 0x114463: _M_reallocate_map (deque.tcc:959)
+       n1: 167772144 0x114463: _M_reserve_map_at_back (stl_deque.h:2130)
+        n1: 167772144 0x114463: void std::deque<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker> >::_M_push_back_aux<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&>(LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&) (deque.tcc:496)
+         n1: 167772144 0x114C56: push_back (stl_deque.h:1506)
+          n1: 167772144 0x114C56: push (stl_queue.h:266)
+           n1: 167772144 0x114C56: addTask (StandardQueueDispatcher.hpp:92)
+            n1: 167772144 0x114C56: resolveTask (StandardWorker.hpp:125)
+             n1: 167772144 0x114C56: work (StandardWorker.hpp:57)
+              n1: 167772144 0x114C56: LRDF::Aruka::Mono::StandardResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (StandardResolver.hpp:71)
+               n0: 167772144 0x110727: main (noMain.cpp:32)
+ n0: 75148 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=56
+#-----------
+time=160379279766
+mem_heap_B=2361705112
+mem_heap_extra_B=43020968
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=162144458170
+mem_heap_B=2284312612
+mem_heap_extra_B=41503468
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=163909635759
+mem_heap_B=2210381992
+mem_heap_extra_B=40053848
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=165674808481
+mem_heap_B=2132934412
+mem_heap_extra_B=38535268
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=167439981359
+mem_heap_B=2053253542
+mem_heap_extra_B=36972898
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=169205157765
+mem_heap_B=1972883152
+mem_heap_extra_B=35397008
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=170970331482
+mem_heap_B=1896554512
+mem_heap_extra_B=33900368
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=172735505651
+mem_heap_B=1821839002
+mem_heap_extra_B=32435358
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=174500680341
+mem_heap_B=1739663212
+mem_heap_extra_B=30824068
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=176265852414
+mem_heap_B=1659871162
+mem_heap_extra_B=29259518
+mem_stacks_B=0
+heap_tree=detailed
+n3: 1659871162 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1492023870 0x1143BA: allocate (new_allocator.h:127)
+  n1: 1492023870 0x1143BA: allocate (alloc_traits.h:464)
+   n1: 1492023870 0x1143BA: allocate (TrackerAllocator.hpp:65)
+    n1: 1492023870 0x1143BA: allocate (alloc_traits.h:318)
+     n1: 1492023870 0x1143BA: _M_allocate_node (stl_deque.h:562)
+      n1: 1492023870 0x1143BA: void std::deque<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker> >::_M_push_back_aux<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&>(LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&) (deque.tcc:497)
+       n1: 1492023870 0x114C56: push_back (stl_deque.h:1506)
+        n1: 1492023870 0x114C56: push (stl_queue.h:266)
+         n1: 1492023870 0x114C56: addTask (StandardQueueDispatcher.hpp:92)
+          n1: 1492023870 0x114C56: resolveTask (StandardWorker.hpp:125)
+           n1: 1492023870 0x114C56: work (StandardWorker.hpp:57)
+            n1: 1492023870 0x114C56: LRDF::Aruka::Mono::StandardResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (StandardResolver.hpp:71)
+             n0: 1492023870 0x110727: main (noMain.cpp:32)
+ n1: 167772144 0x114463: allocate (new_allocator.h:127)
+  n1: 167772144 0x114463: allocate (alloc_traits.h:464)
+   n1: 167772144 0x114463: allocate (TrackerAllocator.hpp:65)
+    n1: 167772144 0x114463: allocate (alloc_traits.h:318)
+     n1: 167772144 0x114463: _M_allocate_map (stl_deque.h:576)
+      n1: 167772144 0x114463: _M_reallocate_map (deque.tcc:959)
+       n1: 167772144 0x114463: _M_reserve_map_at_back (stl_deque.h:2130)
+        n1: 167772144 0x114463: void std::deque<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker> >::_M_push_back_aux<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&>(LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&) (deque.tcc:496)
+         n1: 167772144 0x114C56: push_back (stl_deque.h:1506)
+          n1: 167772144 0x114C56: push (stl_queue.h:266)
+           n1: 167772144 0x114C56: addTask (StandardQueueDispatcher.hpp:92)
+            n1: 167772144 0x114C56: resolveTask (StandardWorker.hpp:125)
+             n1: 167772144 0x114C56: work (StandardWorker.hpp:57)
+              n1: 167772144 0x114C56: LRDF::Aruka::Mono::StandardResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (StandardResolver.hpp:71)
+               n0: 167772144 0x110727: main (noMain.cpp:32)
+ n0: 75148 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=66
+#-----------
+time=178031025817
+mem_heap_B=1580729362
+mem_heap_extra_B=27707718
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=179796200628
+mem_heap_B=1502568802
+mem_heap_extra_B=26175158
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=181561377011
+mem_heap_B=1424735152
+mem_heap_extra_B=24649008
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=183326550666
+mem_heap_B=1323765862
+mem_heap_extra_B=22669218
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=185091727248
+mem_heap_B=1178025202
+mem_heap_extra_B=19811558
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=186856903830
+mem_heap_B=1032284542
+mem_heap_extra_B=16953898
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=188622080412
+mem_heap_B=886543882
+mem_heap_extra_B=14096238
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=190387256994
+mem_heap_B=740803222
+mem_heap_extra_B=11238578
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=192152433576
+mem_heap_B=595062562
+mem_heap_extra_B=8380918
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=193917610158
+mem_heap_B=449321902
+mem_heap_extra_B=5523258
+mem_stacks_B=0
+heap_tree=detailed
+n3: 449321902 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 281474610 0x1143BA: allocate (new_allocator.h:127)
+  n1: 281474610 0x1143BA: allocate (alloc_traits.h:464)
+   n1: 281474610 0x1143BA: allocate (TrackerAllocator.hpp:65)
+    n1: 281474610 0x1143BA: allocate (alloc_traits.h:318)
+     n1: 281474610 0x1143BA: _M_allocate_node (stl_deque.h:562)
+      n1: 281474610 0x1143BA: void std::deque<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker> >::_M_push_back_aux<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&>(LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&) (deque.tcc:497)
+       n1: 281474610 0x114C56: push_back (stl_deque.h:1506)
+        n1: 281474610 0x114C56: push (stl_queue.h:266)
+         n1: 281474610 0x114C56: addTask (StandardQueueDispatcher.hpp:92)
+          n1: 281474610 0x114C56: resolveTask (StandardWorker.hpp:125)
+           n1: 281474610 0x114C56: work (StandardWorker.hpp:57)
+            n1: 281474610 0x114C56: LRDF::Aruka::Mono::StandardResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (StandardResolver.hpp:71)
+             n0: 281474610 0x110727: main (noMain.cpp:32)
+ n1: 167772144 0x114463: allocate (new_allocator.h:127)
+  n1: 167772144 0x114463: allocate (alloc_traits.h:464)
+   n1: 167772144 0x114463: allocate (TrackerAllocator.hpp:65)
+    n1: 167772144 0x114463: allocate (alloc_traits.h:318)
+     n1: 167772144 0x114463: _M_allocate_map (stl_deque.h:576)
+      n1: 167772144 0x114463: _M_reallocate_map (deque.tcc:959)
+       n1: 167772144 0x114463: _M_reserve_map_at_back (stl_deque.h:2130)
+        n1: 167772144 0x114463: void std::deque<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker> >::_M_push_back_aux<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&>(LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> const&) (deque.tcc:496)
+         n1: 167772144 0x114C56: push_back (stl_deque.h:1506)
+          n1: 167772144 0x114C56: push (stl_queue.h:266)
+           n1: 167772144 0x114C56: addTask (StandardQueueDispatcher.hpp:92)
+            n1: 167772144 0x114C56: resolveTask (StandardWorker.hpp:125)
+             n1: 167772144 0x114C56: work (StandardWorker.hpp:57)
+              n1: 167772144 0x114C56: LRDF::Aruka::Mono::StandardResolver<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardWorker<(unsigned char)2, (unsigned char)14, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoWorkerTracker>, LRDF::Aruka::Mono::StandardQueueDispatcher<(unsigned char)2, (unsigned char)14, LRDF::Aruka::WrapperAllocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Aruka::Task<(unsigned char)2, (unsigned char)14> >, LRDF::Tracker::NoMemoryTracker>, LRDF::Aruka::Tracker::NoDispatcherTracker>, LRDF::Aruka::Tracker::NoResolverTracker>::resolve(std::vector<LRDF::Solution<(unsigned char)2, (unsigned char)14>, std::allocator<LRDF::Solution<(unsigned char)2, (unsigned char)14> > >&) (StandardResolver.hpp:71)
+               n0: 167772144 0x110727: main (noMain.cpp:32)
+ n0: 75148 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=76
+#-----------
+time=195682786740
+mem_heap_B=303581242
+mem_heap_extra_B=2665598
+mem_stacks_B=0
+heap_tree=empty

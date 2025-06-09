@@ -1,0 +1,633 @@
+ @startuml
+
+namespace LRDF {
+
+class LRDF.Langford <<C; F>> {
+	# state : lfchar[C*F]	
+
+	+ Langford()
+	+ Langford(in other : Langford)
+
+	+ getFrequency() : uint8
+	+ getCount() : uint8
+	+ getLength() : uint16
+	+ getState() : lfchar[]
+	+ isStateSolution() : bool
+}
+
+class LRDF.Solution <<C; F>> {
+	+ Solution(in solution : Langford)
+	+ Solution(in other : Solution)
+	
+	+ getSolution() : LRDF.Langford
+}
+LRDF.Solution *-- LRDF.Langford
+
+interface LRDF.IResolver {
+	+ IResolver()
+
+	+ resolve(out solutions : LRDF.Solution[]) : void
+
+	+ getResolverTracker() : LRDF.IResolver
+}
+LRDF.Tracker.IBaseExportable <|-- LRDF.IResolver
+LRDF.Tracker.ITracker <|-- LRDF.IResolver
+
+class TrackerAllocator <<T; Allocator; IMemoryTracker>> {
+	- allocator : Allocator
+	- memoryTracker : IMemoryTracker
+	+ ...
+	+ getMemoryTracker() : IMemoryTracker
+}
+
+namespace LRDF.Tracker {
+	abstract LRDF.Tracker.Exporter {
+		# baseDirectoryPath : string
+
+		+ Exporter(in baseDirectoryPath : string)
+
+		+ open() : void
+		+ saveClear() : void
+		+ close() : void
+		+ getFile(in fileName : string) : jsonObject
+		+ getExistingFile(in fileName : string) : jsonObject
+		+ getNonExistingFile(in fileName : string) : jsonObject
+	}
+
+	class LRDF.Tracker.StandardExporter {
+		- streams : unordered_map<string, ostream>
+
+		+ StandardExporter(in baseDirectoryPath : string)
+	}
+	LRDF.Tracker.Exporter <|-- LRDF.Tracker.StandardExporter
+
+	interface LRDF.Tracker.IBaseExportable {
+		+ startExporte(in out exporter : LRDF.Tracker.Exporter) : void
+	}
+	interface LRDF.Tracker.IExportable {
+		+ exporte(out output : jsonObject) : void
+	}
+	
+	interface LRDF.Tracker.ITracker {
+
+	}
+	LRDF.Tracker.ITracker <|-- LRDF.Tracker.IExportable
+	
+	interface LRDF.Tracker.IHardwareTracker {
+		+ IHardwareTracker()
+	}
+	LRDF.Tracker.ITracker <|-- LRDF.Tracker.IHardwareTracker
+	
+	interface LRDF.Tracker.IMemoryTracker {
+		+ IMemoryTracker()
+
+		+ allocated(in size : uint, in pointer : void*) : void
+		+ freed(void*) : void
+	}
+	LRDF.Tracker.ITracker <|-- LRDF.Tracker.IMemoryTracker
+	
+	class LRDF.Tracker.NoMemoryTracker {
+		
+	}
+	LRDF.Tracker.IMemoryTracker <|-- LRDF.Tracker.NoMemoryTracker
+
+	class LRDF.Tracker.StandardMemoryTracker {
+
+	}
+	LRDF.Tracker.IMemoryTracker <|-- LRDF.Tracker.StandardMemoryTracker
+}
+
+namespace LRDF.Aruka {
+	interface LRDF.Aruka.IStandardResolver {
+		+ getWorker() : LRDF.Aruka.IStandardWorker
+		+ getDispatcher() : LRDF.Aruka.IDispatcher
+	}
+	LRDF.IResolver <|-- LRDF.Aruka.IStandardResolver 
+	
+	interface LRDF.Aruka.ISynchronizedResolver {
+
+
+		+ getResolverTracker() : LRDF.Aruka.Tracker.IStandardResolver
+	}
+	LRDF.IResolver <|-- LRDF.Aruka.SynchronizedResolver
+	
+	interface LRDF.Aruka.IParallelResolver {
+
+
+		+ getResolverTracker() : LRDF.Aruka.Tracker.IStandardResolver
+	}
+	LRDF.IResolver <|-- LRDF.Aruka.ISynchronizedResolver
+	
+	interface LRDF.Aruka.IStandardWorker {
+		+ work() : void
+		+ getSolutions() : LRDF.Solution[]
+
+		+ getWorkerTracker() : LRDF.Aruka.Tracker.IWorkerTracker
+	}
+	LRDF.Tracker.IExportable <|-- LRDF.Aruka.IStandardWorker
+	
+	interface LRDF.Aruka.ISynchronizedWorker {
+		+ getWorkerTracker() : LRDF.Aruka.Tracker.IWorkerTracker
+	}
+	
+	interface LRDF.Aruka.IParallelWorker {
+		+ getWorkerTracker() : LRDF.Aruka.Tracker.IWorkerTracker
+	}
+	
+	class LRDF.Aruka.Task <<C; F>> {
+		- currentFrequency : uint8
+		- state : LRDF.Langford
+		
+		+ Task()
+		+ Task(in state : LRDF.Langford, in currentFrequency : uint8)
+		+ Task(in other : Task)
+
+		+ getState() LRDF.Langford
+		+ getCurrentFrequency() : uint8
+	}
+		
+	interface LRDF.Aruka.IDispatcher {
+		+ getDispatcherTracker() : LRDF.Aruka.Tracker.IDispatcherTracker
+		+ getMemoryTracker() : LRDF.Tracker.IMemoryTracker
+	}
+	LRDF.Tracker.IExportable <|-- LRDF.Aruka.IDispatcher
+	
+	namespace LRDF.Aruka.Tracker {
+		interface LRDF.Aruka.Tracker.IResolverTracker {
+			+ IResolverTracker()
+
+			+ initializationStarted() : void
+			+ initializationEnded() : void
+			+ workStarted() : void
+			+ workEnded() : void
+			+ mergeStarted() : void
+			+ mergeEnded() : void
+		}
+		LRDF.Tracker.ITracker <|-- LRDF.Aruka.Tracker.IResolverTracker
+		
+		class LRDF.Aruka.Tracker.NoResolverTracker {
+			
+		}
+		LRDF.Tracker.IResolverTracker <|-- LRDF.Aruka.Tracker.NoResolverTracker
+		LRDF.Aruka.Mono.Tracker.IMonoResolverTracker <|-- LRDF.Aruka.Tracker.NoResolverTracker
+		LRDF.Aruka.OpenMP.Tracker.IParallelResolverTracker <|-- LRDF.Aruka.Tracker.NoResolverTracker
+		LRDF.Aruka.OpenMP.Tracker.ISynchronizedResolverTracker <|-- LRDF.Aruka.Tracker.NoResolverTracker
+		
+		interface LRDF.Aruka.Tracker.IWorkerTracker {
+			+ workStarted() : void
+			+ workEnded() : void
+			+ taskStarted() : void
+			+ taskEnded() : void
+			+ tasksRequested(in numberRequested : uint) : void
+			+ tasksReturned(in numberRequested : uint) : void
+			+ tasksAddedStart() : void
+			+ tasksAdded(in numberRequested : uint) : void
+		}
+		LRDF.Tracker.ITracker <|-- LRDF.Aruka.Tracker.IWorkerTracker
+		
+		class LRDF.Aruka.Tracker.NoWorkerTracker {
+			
+		}
+		LRDF.Tracker.IWorkerTracker <|-- LRDF.Aruka.Tracker.NoWorkerTracker
+		LRDF.Aruka.Mono.Tracker.IMonoWorkerTracker <|-- LRDF.Aruka.Tracker.NoWorkerTracker
+		LRDF.Aruka.OpenMP.Tracker.IParallelWorkerTracker <|-- LRDF.Aruka.Tracker.NoWorkerTracker
+		LRDF.Aruka.OpenMP.Tracker.ISynchronizedWorkerTracker <|-- LRDF.Aruka.Tracker.NoWorkerTracker
+
+		interface LRDF.Aruka.Tracker.IDispatcherTracker {
+			+ IDispatcherTracker()
+
+			+ registerWorker(in worker : id) : void
+			+ tasksRequested(in numberRequested : uint) : void
+			+ tasksReturned(in numberReturned : uint) : void
+			+ tasksAddedStart() : void
+			+ tasksAdded(in numberAdded : uint) : void
+		}
+		LRDF.Tracker.ITracker <|-- LRDF.Aruka.Tracker.IDispatcherTracker
+		
+		class LRDF.Aruka.Tracker.NoDispatcherTracker {
+			
+		}
+		LRDF.Tracker.IDispatcherTracker <|-- LRDF.Aruka.Tracker.NoDispatcherTracker
+		LRDF.Aruka.Mono.Tracker.IMonoDispatcherTracker <|-- LRDF.Aruka.Tracker.NoDispatcherTracker
+		LRDF.Aruka.OpenMP.Tracker.ParallelDispatcherTracker <|-- LRDF.Aruka.Tracker.NoDispatcherTracker
+		LRDF.Aruka.OpenMP.Tracker.IMonoDispatcherTracker <|-- LRDF.Aruka.Tracker.NoDispatcherTracker
+
+		class LRDF.Aruka.Tracker.DispatcherEvent <<TimeUnit>> {
+			- duration : TimeUnit
+			- workerId : ?uint
+			- numberInput : ?uint
+			- numberOutput : ?uint
+			- orderKey : int
+			- type : LRDF.Aruka.Tracker.DispatcherEventType
+
+			+ DispatcherEvent(in duration : TimeUnit, in orderKey : int, in type : LRDF.Aruka.Tracker.DispatcherEventType)
+			+ DispatcherEvent(in duration : TimeUnit, in numberInput : uint, in numberOutput : uint, in orderKey : int, in type : LRDF.Aruka.Tracker.DispatcherEventType)
+
+			+ getDuration() : TimeUnit
+			+ getOrderKey() : int
+			+ getType() : LRDF.Aruka.Tracker.DispatcherEventType
+			+ getWorkerId() : ?uint
+			+ getNumberInput() : ?uint
+			+ getNumberOutput() : ?uint
+		}
+
+		enum LRDF.Aruka.Tracker.DispatcherEventType {
+			+ WAIT
+			+ TASKS_REQUESTED
+			+ TASKS_ADDED
+		}
+
+		class LRDF.Aruka.Tracker.WorkerEvent <<TimeUnit>> {
+			- duration : TimeUnit
+			- numberInput : ?uint
+			- numberOutput : ?uint
+			- orderKey : int
+			- type : LRDF.Aruka.Tracker.WorkerEventType
+
+			+ DispatcherEvent(in duration : TimeUnit, in orderKey : int, in type : LRDF.Aruka.Tracker.WorkerEventType)
+			+ DispatcherEvent(in duration : TimeUnit, in numberInput : uint, in numberOutput : uint, in orderKey : int, in type : LRDF.Aruka.Tracker.WorkerEventType)
+
+			+ getDuration() : TimeUnit
+			+ getOrderKey() : int
+			+ getType() : LRDF.Aruka.Tracker.WorkerEventType
+			+ getNumberInput() : ?uint
+			+ getNumberOutput() : ?uint
+		}
+
+		enum LRDF.Aruka.Tracker.WorkerEventType {
+			+ WAIT
+			+ TASKS_REQUESTED
+			+ TASKS_ADDED
+			+ TASK_RESOLVED
+		}
+	}
+
+	namespace LRDF.Aruka.Mono {
+		interface LRDF.Aruka.Mono.IStandardResolver {
+			
+		}
+		LRDF.Aruka.IStandardResolver <|-- LRDF.Aruka.Mono.IStandardResolver
+
+		interface LRDF.Aruka.Mono.IStandardWorker {
+			+ IStandardWorker(in dispatcher : LRDF.Aruka.Mono.IStandardDispatcher*)
+
+			+ work() : void
+			- resolveTask(in task : LRDF.Aruka.Task) : void
+			+ getSolutions() : LRDF.Solution[]
+
+			+ getWorkerTracker() : LRDF.Aruka.Tracker.IWorkerTracker
+		}
+		LRDF.Aruka.IStandardWorker <|-- LRDF.Aruka.Mono.IStandardWorker
+
+		class LRDF.Aruka.Mono.StandardResolver <<C; F; LRDF.Aruka.Mono.IStandardWorker; LRDF.Aruka.Mono.IStandardDispatcher; LRDF.Aruka.Mono.Tracker.IMonoResolverTracker>> {
+			- worker : LRDF.Aruka.Mono.IStandardWorker*
+			- dispatcher : LRDF.Aruka.Mono.IStandardDispatcher
+			- tracker : LRDF.Aruka.Mono.Tracker.IMonoResolverTracker
+		}
+		LRDF.Aruka.Mono.IStandardResolver <|-- LRDF.Aruka.Mono.StandardResolver 
+
+		class LRDF.Aruka.Mono.StandardWorker <<C; F; LRDF.Aruka.IDispatcher; LRDF.Aruka.Mono.Tracker.IMonoWorkerTracker>> {
+			- dispatcher : LRDF.Aruka.IDispatcher*
+			- workerTracker : LRDF.Aruka.Mono.Tracker.IMonoWorkerTracker
+			- solutions : LRDF.Solution[]
+		}
+		LRDF.Aruka.Mono.IStandardWorker <|-- LRDF.Aruka.Mono.StandardWorker
+
+		interface LRDF.Aruka.Mono.IStandardDispatcher {
+			+ IStandardDispatcher()
+
+			+ getTask(out task : LRDF.Aruka.Task) : uint
+			+ getTasks(in nbTasks : uint, out tasks : LRDF.Aruka.Task[]) : uint
+			+ addTask(in task : LRDF.Aruka.Task) : void
+			+ addTasks(in nbTasks : uint, in tasks : LRDF.Aruka.Task[]) : void
+			+ getNbWorkers() : uint
+			+ getNbTasks() : uint
+			+ isFinish() : bool
+		}
+		LRDF.Aruka.IDispatcher <|-- LRDF.Aruka.Mono.IStandardDispatcher
+
+		class LRDF.Aruka.Mono.StandardQueueDispatcher <<C; F; Allocator; LRDF.Aruka.Mono.Tracker.IMonoDispatcherTracker>> {
+			- queue : Queue<LRDF.Aruka.Task>
+		}
+		LRDF.Aruka.Mono.IStandardDispatcher <|-- LRDF.Aruka.Mono.StandardQueueDispatcher
+
+		namespace LRDF.Aruka.Mono.Tracker {
+			interface LRDF.Aruka.Mono.Tracker.IMonoDispatcherTracker {
+				+ IMonoDispatcherTracker()
+			}
+			LRDF.Tracker.IDispatcherTracker <|-- LRDF.Aruka.Mono.Tracker.IMonoDispatcherTracker
+
+			class LRDF.Aruka.Mono.Tracker.StandardDispatcherTracker {
+				- events : LRDF.Aruka.Tracker.DispatcherEvent[]
+			}
+			LRDF.Aruka.Mono.Tracker.IMonoDispatcherTracker <|-- LRDF.Aruka.Mono.Tracker.StandardDispatcherTracker
+
+			interface LRDF.Aruka.Mono.Tracker.IMonoWorkerTracker {
+				+ IMonoWorkerTracker()
+			}
+			LRDF.Tracker.IWorkerTracker <|-- LRDF.Aruka.Mono.Tracker.IMonoWorkerTracker
+
+			class LRDF.Aruka.Mono.Tracker.StandardWorkerTracker {
+				- workerEvents : LRDF.Aruka.Tracker.WorkerEvent[]
+				- workDuration : long long
+			}
+			LRDF.Aruka.Mono.Tracker.IMonoWorkerTracker <|-- LRDF.Aruka.Mono.Tracker.StandardWorkerTracker
+
+			interface LRDF.Aruka.Mono.Tracker.IMonoResolverTracker {
+				+ IMonoResolverTracker()
+			}
+			LRDF.Tracker.IResolverTracker <|-- LRDF.Aruka.Mono.Tracker.IMonoResolverTracker
+
+			class LRDF.Aruka.Mono.Tracker.StandardResolverTracker {
+				- initializationDuration : long long
+				- workDuration : long long
+				- mergeDuration : long long 
+			}
+			LRDF.Aruka.Mono.Tracker.IMonoResolverTracker <|-- LRDF.Aruka.Mono.Tracker.StandardResolverTracker
+		}
+	}
+
+	namespace LRDF.Aruka.OpenMP {
+		interface LRDF.Aruka.OpenMP.ISynchronizedResolver {
+			+ getWorkers() : LRDF.Aruka.OpenMP.ISynchronizedWorker[]
+			+ getDispatcher() : LRDF.Aruka.OpenMP.IMonoDispatcher
+		}
+		LRDF.Aruka.ISynchronizedResolver <|-- LRDF.Aruka.OpenMP.ISynchronizedResolver
+
+		interface LRDF.Aruka.OpenMP.IHybridStaticResolver {
+			+ getWorkers() : LRDF.Aruka.OpenMP.IHybridStaticWorker[]
+			+ getDispatcher() : LRDF.Aruka.OpenMP.IHybridStaticDispatcher
+		}
+		LRDF.Aruka.IHybridStaticResolver <|-- LRDF.Aruka.OpenMP.IHybridStaticResolver
+
+		interface LRDF.Aruka.OpenMP.IParallelResolver {
+			+ getWorkers() : LRDF.Aruka.OpenMP.IParallelWorker[]
+			+ getDispatcher() : LRDF.Aruka.OpenMP.IParallelDispatcher
+		}
+		LRDF.Aruka.IParallelResolver <|-- LRDF.Aruka.OpenMP.IParallelResolver
+
+		interface LRDF.Aruka.OpenMP.IHybridStaticWorker {
+			+ IHybridStaticWorker(in id : uint, in sizeTasksBlock : uint)
+
+			+ work() : void
+			- resolveTask(in task : LRDF.Aruka.Task) : void
+			+ getSolutions() : LRDF.Solution[]
+			+ getId() : uint
+			+ getD() : LRDF.Aruka.Task[]
+			+ swapD(in newD : LRDF.Aruka.Task[], out oldD : LRDF.Aruka.Task[]) : void
+		}
+		LRDF.Aruka.IHybridStaticWorker <|-- LRDF.Aruka.OpenMP.IHybridStaticWorker
+
+		interface LRDF.Aruka.OpenMP.ISynchronizedWorker {
+			+ ISynchronizedWorker(in id : uint)
+
+			+ resolveTask(in task : LRDF.Aruka.Task) : void
+			+ getSolutions() : LRDF.Solution[]
+			+ getId() : uint
+			+ getD() : LRDF.Aruka.OpenMP.IMonoDispatcher
+		}
+		LRDF.Aruka.ISynchronizedWorker <|-- LRDF.Aruka.OpenMP.ISynchronizedWorker
+
+		interface LRDF.Aruka.OpenMP.IParallelWorker {
+			+ IParallelWorker(in id : uint, in dispatcher : LRDF.Aruka.OpenMP.IParallelDispatcher)
+
+			+ work() : void
+			- resolveTask(in task : LRDF.Aruka.Task, out nextTask : LRDF.Aruka.Task[]) : void
+			+ getSolutions() : LRDF.Solution[]
+			+ getId() : uint
+		}
+		LRDF.Aruka.IParallelWorker <|-- LRDF.Aruka.OpenMP.IParallelWorker
+
+		class LRDF.Aruka.OpenMP.HybridStaticResolver <<C; F; LRDF.Aruka.OpenMP.IHybridStaticWorker; LRDF.Aruka.OpenMP.IHybridStaticDispatcher; LRDF.Aruka.OpenMP.Tracker.IHybridStaticResolverTracker, SIZE_TASKS_BLOCK>> {
+			- workers : LRDF.Aruka.OpenMP.IHybridStaticWorker[]
+			- resolverTracker : LRDF.Aruka.OpenMP.Tracker.IHybridStaticResolverTracker
+			- dispatcher : LRDF.Aruka.OpenMP.IHybridStaticDispatcher
+		}
+		LRDF.Aruka.OpenMP.IHybridStaticResolver <|-- LRDF.Aruka.OpenMP.HybridStaticResolver
+
+		class LRDF.Aruka.OpenMP.ParallelResolver <<C; F; LRDF.Aruka.OpenMP.IParallelWorker; LRDF.Aruka.OpenMP.IParallelDispatcher; LRDF.Aruka.OpenMP.Tracker.IParallelResolverTracker>> {
+			- workers : LRDF.Aruka.OpenMP.IParallelWorker[]
+			- resolverTracker : LRDF.Aruka.OpenMP.Tracker.IParallelResolverTracker
+			- dispatcher : LRDF.Aruka.OpenMP.IParallelDispatcher
+		}
+		LRDF.Aruka.OpenMP.IParallelResolver <|-- LRDF.Aruka.OpenMP.ParallelResolver
+
+		class LRDF.Aruka.OpenMP.SynchronizedResolver <<C; F; LRDF.Aruka.OpenMP.ISynchronizedWorker; LRDF.Aruka.OpenMP.IMonoDispatcher; LRDF.Aruka.OpenMP.Tracker.ISynchronizedResolverTracker>> {
+			- workers : LRDF.Aruka.OpenMP.IParallelWorker[]
+			- resolverTracker : LRDF.Aruka.OpenMP.Tracker.IParallelResolverTracker
+			- dispatcher : LRDF.Aruka.OpenMP.IParallelDispatcher
+		}
+		LRDF.Aruka.OpenMP.IParallelResolver <|-- LRDF.Aruka.OpenMP.ParallelResolver
+		
+		class LRDF.Aruka.OpenMP.HybridStaticWorker <<C; F; LRDF.Aruka.OpenMP.IHybridStaticDispatcher; LRDF.Aruka.OpenMP.Tracker.IHybridStaticWorkerTracker>>  {
+			- workerTracker : LRDF.Aruka.OpenMP.IHybridStaticWorkerTracker
+			- d : LRDF.Aruka.Task[]
+			- solutions : LRDF.Solution[]
+			- id : uint
+			- sizeTasksBlock : uint
+		}
+		LRDF.Aruka.IHybridStaticWorker <|-- LRDF.Aruka.OpenMP.HybridStaticWorker
+
+		class LRDF.Aruka.OpenMP.SynchronizedWorker <<C; F; LRDF.Aruka.OpenMP.IMonoDispatcher; LRDF.Aruka.OpenMP.Tracker.ISynchronizedWorkerTracker>>  {
+			- workerTracker : LRDF.Aruka.OpenMP.ISynchronizedWorkerTracker
+			- t : LRDF.Aruka.OpenMP.IMonoDispatcher
+			- d : LRDF.Aruka.OpenMP.IMonoDispatcher
+			- solutions : LRDF.Solution[]
+			- id : uint
+		}
+		LRDF.Aruka.ISynchronizedWorker <|-- LRDF.Aruka.OpenMP.SynchronizedWorker
+		
+		class LRDF.Aruka.OpenMP.ParallelWorker <<C; F; LRDF.Aruka.OpenMP.IParallelDispatcher; LRDF.Aruka.OpenMP.Tracker.IParallelWorkerTracker>> {
+			- workerTracker : LRDF.Aruka.OpenMP.IParallelWorkerTracker
+			- dispatcher : LRDF.Aruka.OpenMP.IParallelDispatcher
+			- solutions : LRDF.Solution[]
+			- id : uint
+		}
+		LRDF.Aruka.IParallelWorker <|-- LRDF.Aruka.OpenMP.ParallelWorker
+
+		interface LRDF.Aruka.OpenMP.IHybridStaticDispatcher {
+			+ IHybridStaticDispatcher(in sizeBlock : uint) : void
+
+			+ registerWorkerId(in workerId : uint) : void
+
+			+ getTask(in workerId : uint, in id : uint, out task : LRDF.Aruka.Task) : uint
+
+			+ swapD(in workerId : uint, in workerIdOldTasks : uint, in out newTasks : LRDF.Aruka.Task[]) : void
+			
+			+ addRootTask(in task : Task) : void
+
+			+ getNbTasks() : uint
+
+			+ isFinish() : bool
+		}
+
+		interface LRDF.Aruka.OpenMP.IMonoDispatcher {
+			+ IMonoDispatcher(in dispatcherId : uint, in registerWorkerId : uint) : void
+
+			+ getTask(in workerId : uint, out task : LRDF.Aruka.Task) : uint
+			+ getTasks(in workerId : uint, in nbTasks : uint, out tasks : LRDF.Aruka.Task[]) : uint
+			+ getAllTasks(in workerId : uint, out tasks : LRDF.Aruka.Task[]) uint
+			+ getAllTasks(in dispatcher : LRDF.Aruka.OpenMP.IMonoDispatcher) : void
+			+ addTask(in workerId : uint, in task : LRDF.Aruka.Task) : void
+			+ addTasks(in workerId : uint, in nbTasks : uint, in tasks : LRDF.Aruka.Task[]) : void
+			+ getNbTasks() : uint
+
+			+ setFinish() : void
+			+ isFinish() : bool
+		}
+
+		class LRDF.Aruka.OpenMP.HybridStaticDispatcher <<C; F; Allocator; LRDF.Aruka.OpenMP.IHybridStaticDispatcherTracker>> {
+			- tasks : LRDF.Aruka.Task[][]
+			- dispatcherTracker : LRDF.Aruka.OpenMP.IHybridStaticDispatcherTracker
+			- nbTasks : uint
+			- sizeBlock : uint
+		}
+		LRDF.Aruka.OpenMP.IHybridStaticDispatcher <|--  LRDF.Aruka.OpenMP.HybridStaticDispatcher
+
+		class LRDF.Aruka.OpenMP.MonoQueueDispatcher <<C; F; Allocator; LRDF.Aruka.OpenMP.IMonoDispatcherTracker>> {
+			- queue : Queue<LRDF.Aruka.Task>
+			- dispatcherTracker : LRDF.Aruka.OpenMP.IMonoDispatcherTracker
+			- id : uint
+			- isFinished : bool
+		}
+		LRDF.Aruka.OpenMP.IMonoDispatcher <|--  LRDF.Aruka.OpenMP.MonoQueueDispatcher
+
+		interface LRDF.Aruka.OpenMP.IParallelDispatcher {
+			+ IParallelDispatcher()
+
+			+ registerWorker(in workerId : uint) : void
+
+			+ getTask(in workerId : uint, out task : LRDF.Aruka.Task) : uint
+			+ getTasks(in workerId : uint, in nbTasks : uint, out tasks : LRDF.Aruka.Task[]) : uint
+			+ addTask(in workerId : uint, in task : LRDF.Aruka.Task) : void
+			+ addTasks(in workerId : uint, in nbTasks : uint, in tasks : LRDF.Aruka.Task[]) : void
+
+			+ transfert(in workerId : uint, in nbTasksIn : uint, in tasksIn : LRDF.Aruka.Task[], in nbTasksOut : uint, out tasksOut : LRDF.Aruka.Task[]) : uint
+			+ transfertRecommended(in workerId : uint, in nbTasksIn : uint, in tasksIn : LRDF.Aruka.Task[], out tasksOut : LRDF.Aruka.Task[]) : uint
+
+			+ getNbTasks() : uint
+
+			+ isFinish() : bool
+		}
+		LRDF.Tracker.IDispatcherTracker <|-- LRDF.Aruka.OpenMP.IParallelDispatcher
+
+		class LRDF.Aruka.OpenMP.ConcurrentParallelQueueDispatcher <<C; F; Allocator; LRDF.Aruka.OpenMP.IParallelDispatcherTracker>> {
+			- queue : Queue<LRDF.Aruka.Task>
+		}
+		LRDF.Aruka.OpenMP.IParallelDispatcher <|-- LRDF.Aruka.OpenMP.ConcurrentParallelQueueDispatcher
+
+		namespace LRDF.Aruka.OpenMP.Tracker {
+			interface LRDF.Aruka.OpenMP.Tracker.IParallelDispatcherTracker {
+
+			}
+			LRDF.Aruka.Tracker.IDispatcherTracker <|-- LRDF.Aruka.OpenMP.Tracker.IParallelDispatcherTracker
+
+			interface LRDF.Aruka.OpenMP.Tracker.IMonoDispatcherTracker {
+
+			}
+			LRDF.Aruka.Tracker.IDispatcherTracker <|-- LRDF.Aruka.OpenMP.Tracker.IMonoDispatcherTracker
+
+			class LRDF.Aruka.OpenMP.Tracker.StandardDispatcherTracker {
+
+			}
+			LRDF.Aruka.OpenMP.Tracker.ParallelDispatcherTracker <|-- LRDF.Aruka.OpenMP.Tracker.StandardDispatcherTracker
+			LRDF.Aruka.OpenMP.Tracker.IMonoDispatcherTracker <|-- LRDF.Aruka.OpenMP.Tracker.StandardDispatcherTracker
+
+			interface LRDF.Aruka.OpenMP.Tracker.IParallelWorkerTracker {
+
+			}
+			LRDF.Tracker.IWorkerTracker <|-- LRDF.Aruka.OpenMP.Tracker.IParallelWorkerTracker
+
+			interface LRDF.Aruka.OpenMP.Tracker.ISynchronizedWorkerTracker {
+
+			}
+			LRDF.Tracker.IWorkerTracker <|-- LRDF.Aruka.OpenMP.Tracker.ISynchronizedWorkerTracker
+
+			class LRDF.Aruka.OpenMP.Tracker.StandardWorkerTracker {
+
+			}
+			LRDF.Aruka.OpenMP.Tracker.IParallelWorkerTracker <|-- LRDF.Aruka.OpenMP.Tracker.StandardWorkerTracker
+			LRDF.Aruka.OpenMP.Tracker.ISynchronizedWorkerTracker <|-- LRDF.Aruka.OpenMP.Tracker.StandardWorkerTracker
+
+			interface LRDF.Aruka.OpenMP.Tracker.IParallelResolverTracker {
+				+ IParallelResolverTracker()
+			}
+			LRDF.Tracker.IResolverTracker <|-- LRDF.Aruka.OpenMP.Tracker.IParallelResolverTracker
+
+			interface LRDF.Aruka.OpenMP.Tracker.ISynchronizedResolverTracker {
+				+ ISynchronizedResolverTracker()
+			}
+			LRDF.Tracker.IResolverTracker <|-- LRDF.Aruka.OpenMP.Tracker.ISynchronizedResolverTracker
+			
+			class LRDF.Aruka.OpenMP.Tracker.StandardResolverTracker {
+
+			}
+			LRDF.Aruka.OpenMP.Tracker.StandardResolverTracker <|-- LRDF.Aruka.OpenMP.Tracker.IParallelResolverTracker
+			LRDF.Aruka.OpenMP.Tracker.ISynchronizedResolverTracker <|-- LRDF.Aruka.OpenMP.Tracker.IParallelResolverTracker
+		}
+	}
+	
+	namespace LRDF.Aruka.MPI {
+		interface LRDF.Aruka.MPI.IHybridStaticResolver {
+			+ getWorkers() : LRDF.Aruka.MPI.IHybridStaticWorker[]
+			+ getDispatcher() : LRDF.Aruka.MPI.IHybridStaticDispatcher
+		}
+		LRDF.Aruka.IHybridStaticResolver <|-- LRDF.Aruka.MPI.IHybridStaticResolver
+
+		interface LRDF.Aruka.MPI.IHybridStaticWorker {
+			+ IHybridStaticWorker(in id : uint, in sizeTasksBlock : uint)
+
+			+ work() : void
+			- resolveTask(in task : LRDF.Aruka.Task) : void
+			+ getSolutions() : LRDF.Solution[]
+			+ getId() : uint
+			+ getD() : LRDF.Aruka.Task[]
+			+ swapD(in newD : LRDF.Aruka.Task[], out oldD : LRDF.Aruka.Task[]) : void
+		}
+		LRDF.Aruka.IHybridStaticWorker <|-- LRDF.Aruka.MPI.IHybridStaticWorker
+
+		interface LRDF.Aruka.MPI.IHybridStaticDispatcher {
+			+ IHybridStaticDispatcher(in sizeBlock : uint) : void
+
+			+ registerWorkerId(in workerId : uint) : void
+
+			+ getTask(in workerId : uint, in id : uint, out task : LRDF.Aruka.Task) : uint
+
+			+ swapD(in workerId : uint, in workerIdOldTasks : uint, in out newTasks : LRDF.Aruka.Task[]) : void
+			
+			+ addRootTask(in task : Task) : void
+
+			+ getNbTasks() : uint
+
+			+ isFinish() : bool
+		}
+
+		class LRDF.Aruka.MPI.HybridStaticResolver <<C; F; LRDF.Aruka.MPI.IHybridStaticWorker; LRDF.Aruka.MPI.IHybridStaticDispatcher; LRDF.Aruka.MPI.Tracker.IHybridStaticResolverTracker, SIZE_TASKS_BLOCK>> {
+			- workers : LRDF.Aruka.MPI.IHybridStaticWorker[]
+			- resolverTracker : LRDF.Aruka.MPI.Tracker.IHybridStaticResolverTracker
+			- dispatcher : LRDF.Aruka.MPI.IHybridStaticDispatcher
+		}
+		LRDF.Aruka.MPI.IHybridStaticResolver <|-- LRDF.Aruka.MPI.HybridStaticResolver
+
+		class LRDF.Aruka.MPI.HybridStaticWorker <<C; F; LRDF.Aruka.MPI.IHybridStaticDispatcher; LRDF.Aruka.MPI.Tracker.IHybridStaticWorkerTracker>>  {
+			- workerTracker : LRDF.Aruka.MPI.IHybridStaticWorkerTracker
+			- d : LRDF.Aruka.Task[]
+			- solutions : LRDF.Solution[]
+			- id : uint
+			- sizeTasksBlock : uint
+		}
+		LRDF.Aruka.IHybridStaticWorker <|-- LRDF.Aruka.MPI.HybridStaticWorker
+
+		class LRDF.Aruka.MPI.HybridStaticDispatcher <<C; F; Allocator; LRDF.Aruka.MPI.IHybridStaticDispatcherTracker>> {
+			- tasks : LRDF.Aruka.Task[][]
+			- dispatcherTracker : LRDF.Aruka.MPI.IHybridStaticDispatcherTracker
+			- nbTasks : uint
+			- sizeBlock : uint
+		}
+		LRDF.Aruka.MPI.IHybridStaticDispatcher <|--  LRDF.Aruka.MPI.HybridStaticDispatcher
+	}
+}
+
+}
+
+@enduml
